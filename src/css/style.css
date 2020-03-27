@@ -1,36 +1,45 @@
 @font-face {
-  font-family: 'Proxima Nova Rg';
+  font-family: 'Nautilus Pompilius';
   font-display: swap;
-  src: url("ProximaNova-Regular.eot");
-  src: local("Proxima Nova Regular"), local("ProximaNova-Regular"), url("ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("ProximaNova-Regular.woff2") format("woff2"), url("ProximaNova-Regular.woff") format("woff"), url("ProximaNova-Regular.ttf") format("truetype");
+  src: url("../fonts/NautilusPompilius.eot");
+  src: local("Nautilus Pompilius Regular"), local("NautilusPompilius"), url("../fonts/NautilusPompilius.eot?#iefix") format("embedded-opentype"), url("../fonts/NautilusPompilius.woff2") format("woff2"), url("../fonts/NautilusPompilius.woff") format("woff"), url("../fonts/NautilusPompilius.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Proxima Nova Lt';
+  font-family: 'Open Sans';
   font-display: swap;
-  src: url("ProximaNova-Light.eot");
-  src: local("Proxima Nova Light"), local("ProximaNova-Light"), url("ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("ProximaNova-Light.woff2") format("woff2"), url("ProximaNova-Light.woff") format("woff"), url("ProximaNova-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Proxima Nova Th';
-  font-display: swap;
-  src: url("ProximaNova-Extrabld.eot");
-  src: local("Proxima Nova Extrabold"), local("ProximaNova-Extrabld"), url("ProximaNova-Extrabld.eot?#iefix") format("embedded-opentype"), url("ProximaNova-Extrabld.woff2") format("woff2"), url("ProximaNova-Extrabld.woff") format("woff"), url("ProximaNova-Extrabld.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Proxima Nova Rg';
-  font-display: swap;
-  src: url("ProximaNova-Bold.eot");
-  src: local("Proxima Nova Bold"), local("ProximaNova-Bold"), url("ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("ProximaNova-Bold.woff2") format("woff2"), url("ProximaNova-Bold.woff") format("woff"), url("ProximaNova-Bold.ttf") format("truetype");
+  src: url("../fonts/OpenSans-Bold.eot");
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
   font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  src: url("../fonts/OpenSans-SemiBold.eot");
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("../fonts/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  src: url("../fonts/.eot");
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../fonts/.eot?#iefix") format("embedded-opentype"), url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff"), url("../fonts/.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.eot");
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -386,8 +395,9 @@ template {
 }
 
 body {
-  font-family: 'Yeseva One', cursive;
-  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 .container {
@@ -395,28 +405,8 @@ body {
   padding: 0 15px;
 }
 
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.flex-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 a {
   text-decoration: none;
-  display: block;
 }
 
 img {
