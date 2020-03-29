@@ -1,0 +1,40 @@
+.header
+    padding: 35px 0 0
+.burger
+    cursor: pointer
+.logo
+    display: block
+.menu
+    &__content
+        +flex-wrap
+        justify-content: space-between
+    &__contacts
+        margin-right: -36px
+    &__burger
+        width: 40px
+        height: 35px
+        margin-right: 36px
+    &__block
+        +flex
+    &__logo
+        margin-top: -32px
+.contacts
+    +flex-wrap
+    &__phone
+        margin-top: 3px
+        &::before
+            content: url('../img/phone.svg')
+            width: 30px
+            height: 30px
+            margin: -2px 5px 0 0
+            display: inline-block
+            vertical-align: middle
+    &__viber
+        margin: 0 8px 0 25px
+    &__whatsapp
+        margin: -2px 58px 0 0
+    &__button
+        margin-top: -8px
+        width: 189px
+        height: 38px
+        padding: 11px 10px 11px 15px
