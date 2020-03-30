@@ -448,8 +448,8 @@ button {
   background: -webkit-linear-gradient(top, #F492B2 0%, #F65D77 100%);
   background: -o-linear-gradient(top, #F492B2 0%, #F65D77 100%);
   background: linear-gradient(180deg, #F492B2 0%, #F65D77 100%);
-  -webkit-box-shadow: 0px 4px 19px #F65D77;
-          box-shadow: 0px 4px 19px #F65D77;
+  -webkit-box-shadow: 0px 2px 10px #F65D77;
+          box-shadow: 0px 2px 10px #F65D77;
 }
 
 .button--primary:hover {
@@ -4957,6 +4957,13 @@ body.compensate-for-scrollbar {
 .nav__link {
   color: #595354;
   line-height: 22px;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.nav__link:hover {
+  color: #F65D77;
 }
 
 .header {
@@ -5190,7 +5197,7 @@ body.compensate-for-scrollbar {
 }
 
 .services-card:hover .services-card__button {
-  bottom: -70px;
+  bottom: -66px;
 }
 
 .services-card:hover .button--primary {
