@@ -1,3 +1,11 @@
+@media (max-width: 1460px)
+    .contact
+        &-sides
+            &__column
+                &:nth-child(2)
+                    margin-right: 0
+            &__left
+                margin-left: 0
 @media (max-width: 1360px)
     .menu
         &__contacts
@@ -6,6 +14,13 @@
         &__bg
             background-position: center
 @media (max-width: 1200px)
+    .contact
+        &-sides
+            align-items: center
+            &__left
+                max-width: 350px
+        &__bg
+            min-height: 615px
     .hero
         &__bg
             min-height: 766px
@@ -63,6 +78,39 @@
         &__title
             font-size: 25px
             line-height: 34px
+@media (max-width: 1070px)
+    .reviews
+        &-slider
+            &__size
+                max-width: 450px
+        &-slide
+            &__block
+                margin: 0 5px
+                width: 450px !important
+                max-width: none
+            p
+                width: 170px
+    .contact
+        padding: 0 0 100px
+        .container
+            max-width: 900px
+        &-sides
+            position: relative
+            &__form
+                flex-direction: column
+            &__column
+                &:nth-child(2)
+                    margin-left: 0
+                    margin-top: 10px
+            &__right
+                &-title
+                    position: absolute
+                    top: -90px
+                    left: 50%
+                    transform: translateX(-50%)
+        &__bg
+            min-height: 704px
+            background-size: cover
 @media (max-width: 1050px)
     .steps
         &-sides
@@ -72,6 +120,9 @@
                     line-height: 33px
                     max-width: 200px
 @media (max-width: 992px)
+    .accordion
+        &__size
+            margin-left: 0
     .services
         &-card
             &__item
@@ -93,6 +144,14 @@
             &__right
                 max-width: 540px
 @media (max-width: 880px)
+    .footer
+        .container
+            max-width: 550px
+        &-side
+            &__right
+                display: none
+            &__center
+                margin-left: 0
     .pass-test
         &__content
             max-width: 380px
@@ -109,6 +168,17 @@
                         margin-right: 20px
                         margin-top: -110px
 @media (max-width: 768px)
+    .contact
+        &-sides
+            &__right
+                &-title
+                    width: 100%
+                    margin: 0
+    .faq__more
+        padding-left: 53px
+        &::before
+            margin-left: 0
+            left: 0
     .gallery
         &-block
             &__image
@@ -239,6 +309,16 @@
             &__left
                 margin-left: 0
 @media (max-width: 730px)
+    .contact
+        &-sides
+            flex-direction: column
+            &__left
+                height: 420px
+            &__input, 
+            &__choice
+                width: 100% !important
+            &__select
+                background-position: 307px 21px
     .gallery
         .container
             max-width: 500px
@@ -294,6 +374,16 @@
             span
                 display: block
 @media (max-width: 660px)
+    .faq-accordion
+        &__size
+            height: 530px
+    .accordion
+        &__title
+            font-size: 14px
+        p
+            font-size: 14px
+            line-height: 19px
+            margin: 15px 0 20px
     .contacts
         &__viber
             margin: -2px 10px 0 10px 
@@ -306,7 +396,30 @@
     .menu
         &__burger
             width: 27px  
+@media (max-width: 600px)
+    .accordion
+        &__title
+            text-align: center
+            &::after
+                display: none
+            .accordion
+                &__title
+                    &--open
+                        &::after
+                            display: none
+@media (max-width: 563px)
+    .accordion
+        &__size
+            height: 70px
+    .faq-accordion
+        &__size
+            height: 560px
 @media (max-width: 520px)
+    .footer
+        &-side
+            flex-direction: column
+            &__left
+                margin-bottom: 20px
     .gallery
         padding: 39px 0 81px
         .container
@@ -315,7 +428,48 @@
         &-card
             &s
                 +flex-column-center    
-@media (max-width: 430px)  
+@media (max-width: 500px) 
+    .contact
+        &-sides
+            &__left
+                max-width: 131px
+                height: auto
+                margin-bottom: 30px
+    .reviews
+        &-slide
+            &__image
+                max-width: 152px
+                overflow: hidden 
+        &-slider
+            &__size
+                max-width: 350px
+@media (max-width: 493px)
+    .faq-accordion
+        &__size
+            height: 587px
+    .reviews
+        &__bg
+            margin-top: -70px 
+            min-height: 560px 
+@media (max-width: 471px)  
+    .faq-accordion
+        &__size
+            height: 609px          
+@media (max-width: 430px)
+    .gallery
+        &__bg
+            &::after
+                bottom: -110px
+    .reviews
+        &__bg
+            margin-top: 0 
+        &-slide p
+            font-size: 14px
+            line-height: 19px 
+    .faq
+        &__title
+            margin: 80px auto 30px
+            max-width: 220px
     .header
         padding: 22px 0 3px
     .contacts
@@ -345,7 +499,31 @@
             line-height: 25px
         &__content
             margin: 0  
+@media (max-width: 412px)
+    .faq-accordion
+        &__size
+            height: 620px
+    .reviews
+        &__title
+            margin: 0 0 50px
+        &-slide p
+            width: 110px
+        &-slider
+            &__size
+                max-width: 290px
 @media (max-width: 380px)
+    .contact-sides
+        &__input, 
+        &__choice,
+        &__textarea,
+        &__button
+            max-width: 300px
+        &__textarea
+            width: 100%
+        &__button
+            width: 100%
+        &__select
+            background-position: 240px 21px
     .pass-test
         padding: 58px 0 37px
         &::before
@@ -363,6 +541,31 @@
             line-height: 25px
             max-width: 228px
             margin: 21px auto 20px
+@media (max-width: 347px)
+    .accordion
+        padding: 10px 10px 0 10px
+        &__title
+            line-height: 19px
+        &__size
+            height: 60px
+    .faq
+        &__bg
+            min-height: 800px
+        &-accordion
+            &__size
+                height: 560px
+@media (max-width: 336px)
+    .reviews
+        &-slide
+            &__pesonal
+                padding: 5px 5px 0 0
+            &__name
+                margin: 0 0 10px
+            p
+                width: auto
+        &-slider
+            &__size
+                max-width: 268px
 @media (max-width: 320px)
     .steps
         padding: 50px 0 0
