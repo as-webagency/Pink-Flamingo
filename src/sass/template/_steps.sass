@@ -1,0 +1,88 @@
+.steps
+    padding: 153px 0 0
+    &-top
+        &__size
+            margin-bottom: 157px
+        .container
+            max-width: 1250px
+        &-block
+            text-align: center
+            max-width: 210px
+            &s
+                +flex-wrap
+                justify-content: space-between
+            &__image
+                margin-bottom: 20px
+                img
+                    margin: 0 auto
+            &__text
+                line-height: 22px
+                color: $dark
+                margin: 0
+            &:nth-child(1)
+                .steps-top-block
+                    &__image
+                        margin-left: 20px   
+    &-bottom
+        &__size
+            background: url('../img/steps.png') center no-repeat
+            width: 100%
+            min-height: 635px
+            margin-top: -4px
+        .container
+            max-width: 1185px
+    &-sides
+        +flex-wrap
+        justify-content: space-between
+        &__left
+            max-width: 306px
+            margin-top: 215px
+            margin-left: 50px
+            &-number
+                font-family: 'Montserrat', sans-serif
+                color: $darkPink
+                font-size: 168px
+                text-align: center
+                margin-bottom: -6px
+            &-title
+                color: $dark
+                margin: 0
+                font-size: 37px
+                line-height: 50px
+                text-align: center
+                max-width: 306px
+        &__right
+            +flex-wrap
+            max-width: 680px
+            margin-top: 150px
+            &-block
+                max-width: 300px
+                &:nth-child(1)
+                    margin-right: 37px
+                &:nth-child(1),
+                &:nth-child(2)
+                    margin-bottom: 22px
+                &:nth-child(3)
+                    margin-right: 35px
+                &:nth-child(3),
+                &:nth-child(4)
+                    .steps-sides
+                        &__right
+                            &-number
+                                margin-bottom: 20px
+            &-number
+                font-family: 'Montserrat', sans-serif
+                color: $darkPink
+                font-size: 30px
+                width: 50px
+                height: 50px
+                background-color: $light
+                border-radius: 50%
+                +flex-content-center
+                margin-top: 3px
+                margin-bottom: 31px
+            &-text
+                color: $black
+                line-height: 23px
+                margin-left: 8px
+                

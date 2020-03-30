@@ -1,0 +1,74 @@
+.faq
+    &__bg
+        background: linear-gradient(2.38deg, $light 5.45%, rgba($light, 0) 25.25%), linear-gradient(180deg, $light 26.65%, rgba($light, 0) 100%), url('../img/question-bg.png') no-repeat
+        background-position: center
+        width: 100%
+        min-height: 891px
+    &__title
+        font-weight: bold
+        margin: 207px 0 70px 20px
+    &-accordion
+        &__size
+            max-width: 765px
+            margin: 0 auto
+            height: 510px
+            overflow: hidden
+            &--open
+                height: auto
+                overflow: visible
+    &__more
+        position: relative
+        max-width: 630px
+        margin: 28px auto 0
+        color: $dark
+        font-weight: bold
+        cursor: pointer
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: -53px
+            background: url('../img/more.png') no-repeat
+            width: 24px
+            height: 16px
+            margin-left: 11px
+.accordion
+    background-color: $light
+    border: 1px solid $lightGrey
+    border-radius: 5px
+    padding: 15px 15px 0 34px
+    &__size
+        margin-bottom: 12px
+        margin-left: 20px
+        height: 51px
+        overflow: hidden
+        &:last-child
+            margin-bottom: 0
+    &.accordion--open
+        height: auto
+        border: 1px solid $darkPink
+    &__title
+        margin: 0
+        font-size: 16px
+        line-height: 22px
+        position: relative
+        cursor: pointer
+        transition: 1s
+        padding-bottom: 15px
+        &::after
+            content: ''
+            position: absolute
+            top: 6px
+            right: 0
+            background: url('../img/arrow-faq.png') no-repeat
+            width: 8px
+            height: 12px
+        &.accordion__title--open
+            transition: 1s
+            &::after 
+                transform: rotate(90deg)
+    p
+        line-height: 22px  
+        color: $dark  
+        max-width: 570px 
+        margin: 15px 0 51px

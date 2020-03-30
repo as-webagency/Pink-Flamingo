@@ -1,0 +1,64 @@
+.reviews
+    &__bg
+        margin-top: -119px
+        background: linear-gradient(179.66deg, $light 1.9%, rgba($light, 0) 13.66%), linear-gradient(358.09deg, $light 3.25%, rgba($light, 0) 45.27%), linear-gradient(259.18deg, rgba($light, 0.4) 9.28%, rgba($light, 0.4) 54.14%), url('../img/reviews/reviews-bg.png') no-repeat
+        width: 100%
+        min-height: 649px
+        background-size: cover
+        background-position: center
+    &__title
+        font-weight: bold
+        margin: 0 0 70px 20px
+    &-slider
+        &__size
+            margin: 0 auto
+            max-width: 1170px
+        .slick
+            &-dots
+                list-style: none
+                padding: 0
+                +flex-content-center
+                margin: 27px 0
+                li
+                    border: 1px solid $dark
+                    width: 12px
+                    height: 12px
+                    border-radius: 50%
+                    margin: 0 10px
+                .slick-active
+                    border: 1px solid $darkPink
+                    background-color: $darkPink
+                button
+                    display: none
+            &-arrow
+                display: none !important
+    &-slide
+        &__block
+            max-width: 434px
+            margin: 0 75px
+            display: flex !important
+            background-color: $light
+            border: 1px solid $darkText
+            box-shadow: 0px 4px 4px rgba($black, 0.25)
+            border-radius: 5px
+        &__pesonal
+            padding: 10px 10px 0 0
+        &__image
+            margin-right: 10px
+            max-width: 250px
+            width: 100%
+            height: 254px
+            border-radius: 5px
+            img
+                max-width: none
+                height: 100%
+        &__name
+            font-size: 20px
+            line-height: 27px
+            margin: 0 0 21px
+            color: $black
+        p
+            max-width: 165px
+            margin: 0
+            line-height: 22px
+            color: $black

@@ -18,7 +18,153 @@
         p
             font-size: 25px
             line-height: 34px
+    .services
+        &-card
+            &__item
+                &:nth-child(1), 
+                &:nth-child(4)
+                    margin-left: 0
+                &:nth-child(3), 
+                &:nth-child(6)
+                    margin-right: 0
+    .gallery
+        .container
+            max-width: 750px
+        &-block
+            &__image
+                max-width: 233px
+                height: 148px
+@media (max-width: 1140px)
+    .steps
+        &-top 
+            .container
+                max-width: 600px
+            &__size
+                margin-bottom: 70px
+            &-block
+                margin-bottom: 33px
+        &-sides
+            &__left
+                margin-left: 0
+            &__right
+                &-block
+                    max-width: 250px
+                    &:nth-child(1),
+                    &:nth-child(2)
+                        margin-bottom: 15px
+    .pass-test
+        padding: 58px 0 37px
+        &::before
+            min-height: 338px
+            background-size: cover
+            max-width: 45%
+        &__text
+            margin: 21px 0 36px
+        &__title
+            font-size: 25px
+            line-height: 34px
+@media (max-width: 1050px)
+    .steps
+        &-sides
+            &__left
+                &-title
+                    font-size: 24px
+                    line-height: 33px
+                    max-width: 200px
+@media (max-width: 992px)
+    .services
+        &-card
+            &__item
+                &:nth-child(2), 
+                &:nth-child(5)
+                    margin: 0 5px 112px
+    .pass-test
+        &::before
+            min-height: 327px
+        &__button
+            max-width: 229px
+        &__text
+            font-size: 20px
+            line-height: 27px
+        &__content
+            margin-right: 0
+    .steps
+        &-sides
+            &__right
+                max-width: 540px
+@media (max-width: 880px)
+    .pass-test
+        &__content
+            max-width: 380px
+    .steps
+        &-sides
+            &__right
+                max-width: 500px
+                &-block
+                    max-width: 230px
+                    &:nth-child(1),
+                    &:nth-child(2)
+                        margin-right: 10px
+                    &:nth-child(3)
+                        margin-right: 20px
+                        margin-top: -110px
 @media (max-width: 768px)
+    .gallery
+        &-block
+            &__image
+                margin-bottom: 14px
+                &:nth-child(1),
+                &:nth-child(4)
+                    margin-left: 0
+    .steps
+        padding: 70px 0 0
+        &-top 
+            .container
+                max-width: 580px
+            &__size
+                margin-bottom: 0
+            &-block
+                margin-bottom: 53px
+        &-bottom
+            &__size
+                margin-top: 0
+                background: url(../img/steps2.png) center no-repeat
+                min-height: 647px
+        &-sides
+            &__left
+                margin-top: 125px
+                margin-left: 24px
+                &-number
+                    font-size: 152px
+                    margin-bottom: -16px
+            &__right
+                margin-top: 85px
+                max-width: 485px
+                &-number
+                    margin-bottom: 10px
+                &-text
+                    margin-left: 0
+                &-block
+                    &:nth-child(2)
+                        margin-right: 0
+                        margin-left: 12px
+                    &:nth-child(3)
+                        margin-top: -90px
+                        .steps-sides
+                            &__right
+                                &-number
+                                    margin-bottom: 8px
+                                &-text
+                    &:nth-child(4)
+                        margin-top: 98px     
+                        .steps-sides
+                            &__right
+                                &-number
+                                    margin-bottom: 12px             
+    .pass-test
+        padding: 58px 0 47px
+        &::before
+            min-height: 338px
     .header
         padding: 32px 0 3px
     .menu
@@ -59,6 +205,94 @@
         &__button
             margin-left: 0
             padding: 17px 110px 13px 110px
+    .services
+        padding: 63px 0 15px
+        &__title
+            margin: 0 0 50px -30px
+        &-cards
+            &__items
+                max-width: 610px
+        &-card
+            &__item
+                height: 306px
+                margin-bottom: 125px
+                &:nth-child(2),
+                &:nth-child(5)
+                    margin: 0 0 112px
+            &__button
+                max-width: 240px                    
+    .title
+        font-size: 25px
+        line-height: 34px
+    .pass-test
+        &::before
+            max-width: 47%
+        &__content
+            max-width: 360px
+        &__text
+            margin: 21px 0 36px 3px
+        &__button
+            margin-left: 6px
+@media (max-width: 740px)
+    .steps
+        &-sides
+            &__left
+                margin-left: 0
+@media (max-width: 730px)
+    .gallery
+        .container
+            max-width: 500px
+            padding: 0
+        &-block
+            &__image
+                max-width: 133px
+                height: 85px
+    .steps
+        &-bottom
+            &__size
+                background-size: cover
+            .container
+                max-width: 330px    
+        &-sides
+            +flex-column
+            &__left
+                +flex
+                align-items: center
+                flex-direction: row
+                margin: 125px auto 0
+            &__right
+                +flex-column
+                margin: 40px 0 30px
+                max-width: 462px
+                &-block
+                    &:nth-child(1),
+                    &:nth-child(2)
+                        margin-right: 0
+                        margin-left: 0
+                    &:nth-child(3)
+                        margin-top: 0
+                        margin-right: 0
+                        margin-left: 0
+                        margin-bottom: 15px
+                    &:nth-child(4)
+                        margin-top: 0
+                &-text
+                    max-width: 220px
+    .pass-test
+        &::before
+            max-width: 100%
+        &__content
+            margin: 320px auto 0
+@media (max-width: 700px)
+    .steps
+        &-top
+            &-blocks
+                +flex-column-center
+    .services
+        &__title
+            margin: 0 0 50px
+            span
+                display: block
 @media (max-width: 660px)
     .contacts
         &__viber
@@ -72,6 +306,15 @@
     .menu
         &__burger
             width: 27px  
+@media (max-width: 520px)
+    .gallery
+        padding: 39px 0 81px
+        .container
+            max-width: 280px
+    .services
+        &-card
+            &s
+                +flex-column-center    
 @media (max-width: 430px)  
     .header
         padding: 22px 0 3px
@@ -102,7 +345,103 @@
             line-height: 25px
         &__content
             margin: 0  
+@media (max-width: 380px)
+    .pass-test
+        padding: 58px 0 37px
+        &::before
+            min-height: 301px
+        &__title
+            font-weight: bold
+            font-size: 20px
+            line-height: 27px
+            text-align: center
+        &__content
+            margin: 280px auto 0
+            text-align: center
+        &__text
+            font-size: 18px
+            line-height: 25px
+            max-width: 228px
+            margin: 21px auto 20px
 @media (max-width: 320px)
+    .steps
+        padding: 50px 0 0
+        &-top
+            &-block
+                max-width: 180px
+                margin-bottom: 36px
+                &__image
+                    width: 68px
+                    margin: 0 auto 16px !important
+                &__text
+                    font-size: 14px
+                    line-height: 19px
+        &-sides
+            &__left
+                margin: 64px auto 0
+                max-width: 280px
+                &-number
+                    font-size: 100px
+                    margin-left: 35px
+                &-title
+                    margin: 40px 0 0 42px
+                    font-size: 17px
+                    line-height: 23px
+            &__right
+                &-block
+                    margin-left: 22px !important
+                    margin-top: -9px !important
+                    margin-bottom: 31px !important
+    .pass-test
+        padding: 0
+        min-height: 608px
+        .container
+            position: relative
+        &__bg
+            &::before
+                top: 10px
+        &__content
+            position: absolute
+            top: 60px
+        &__title
+            max-width: 290px
+            letter-spacing: 0.3px
+        &__text
+            margin: 17px auto 29px
+        &__button
+            max-width: 230px
+            margin-left: 0
+            padding: 11px 0 10px
+    .title
+        font-size: 20px
+        line-height: 27px
+    .services
+        padding: 41px 0 15px
+        &__title
+            max-width: 230px
+            margin: 0 auto 30px
+        &-card
+            &__item
+                height: 214px
+                margin-bottom: 75px
+                &:nth-child(2),
+                &:nth-child(5)
+                    margin-bottom: 75px
+            &__image
+                max-width: 166px
+                height: 214px
+            &__cloud
+                max-width: 166px
+                height: 100px
+            &__text
+                font-size: 16px
+                line-height: 16px
+                margin: 61px auto 0
+            &__button
+                max-width: 163px
+                height: 33px
+                bottom: -45px
+                left: 2px
     .header
         padding: 18px 0 7px  
     .menu
