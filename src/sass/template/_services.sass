@@ -23,7 +23,11 @@
                 margin: 0 auto
                 max-width: 955px
         &__block
+            display: block
             box-shadow: 0px 4px 16px rgba($black, 0.25)
+            transition: .4s
+            &:hover
+                box-shadow: 0px 4px 16px $lightPink
         &__image
             max-width: 240px
             height: 306px
@@ -40,6 +44,10 @@
             left: 0
             right: 0
             bottom: -61px
+            &:hover
+                bottom: -66px
+            &:focus
+                background: linear-gradient(180deg, $pink 0%, $darkPink 100%)
         &__text
             font-family: 'Nautilus Pompilius', sans-serif
             text-align: center
@@ -57,16 +65,5 @@
             max-width: 241px
             width: 100%
             height: 110px
-        &:hover
-            .services-card
-                &__block
-                    box-shadow: 0px 4px 16px $lightPink
-                &__button
-                    bottom: -66px
-            .button
-                &--primary
-                    background: linear-gradient(180deg, $pink 0%, $darkPink 100%)
-                    &:focus
-                        background: linear-gradient(180deg, $pink 0%, $darkPink 100%)
         
         

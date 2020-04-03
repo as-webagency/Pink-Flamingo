@@ -1,0 +1,129 @@
+.types
+    padding-top: 105px
+    .container
+        max-width: 1349px
+    &-cleaning
+        &-tab
+            border-right: 1px solid $tab
+            color: $black
+            text-align: center
+            width: 100%
+            padding: 10px 0 0 12px
+            line-height: 20px
+            &:first-child
+                border-left: 1px solid $tab
+            &s
+                +flex
+                justify-content: space-between
+                border-top: 1px solid $tab
+                border-bottom: 1px solid $tab
+                &__items
+                    margin: 0 0 72px 15px
+                    height: 57px
+            &:nth-child(5),
+            &:nth-child(6)
+                padding-top: 18px
+            &:hover,
+            &--active
+                box-shadow: 0px 0px 4px $lightPink
+                border-right: 1px solid transparent
+    &__title
+        font-weight: bold
+        margin: 0 0 69px 50px
+    &-room
+        &-tab
+            +flex-wrap
+            align-items: center
+            cursor: pointer
+            transition: .4s
+            &s
+                +flex-wrap
+                justify-content: space-between
+                &__items
+                    max-width: 1200px
+                    margin: 0 auto 56px
+            &__image
+                margin-right: 18px
+            &__name
+                margin-top: 6px
+                display: inline-block
+                font-size: 20px
+                line-height: 27px
+                color: $black
+            &--active,
+            &:hover
+                .types-room-tab
+                    &__name
+                        color: $darkPink
+        &-image
+            display: none
+            &--active
+                display: block
+            &s
+                &__items
+                    max-width: 1304px
+                    height: 698px
+                    margin: 0 auto 34px 16px
+    &-included
+        &__size
+            margin-left: 20px
+.included
+    &__size
+        max-width: 700px
+    &__title
+        margin: 0 0 12px
+        font-size: 20px
+        line-height: 27px
+        color: $dark
+        span
+            display: inline-block  
+            color: $darkPink     
+    p
+        margin: 0 0 26px
+        font-size: 16px
+        line-height: 22px
+        color: $dark
+    &-name
+        +flex
+        align-items: flex-end
+        &__size
+            margin-bottom: 40px
+        &__clear
+            display: inline-block
+            margin-left: 11px
+            font-size: 20px
+            line-height: 27px
+            border-bottom: 1px solid $darkPink
+    &-list
+        padding: 0
+        margin: 0
+        list-style: none
+        +flex-wrap
+        &__size
+            margin-left: 3px
+            width: 100%
+            max-width: 895px
+        &__item
+            +flex
+            align-items: center
+            max-width: 600px
+            width: 50%
+            margin: 6px 0
+        &__image
+            width: 24px
+            height: 24px
+            margin-right: 13px
+        &__name
+            font-size: 16px
+            line-height: 22px
+            color: $dark
+    &-wrap
+        +flex-wrap
+        align-items: flex-end
+        justify-content: space-between
+        &__button
+            max-width: 338px
+            height: 54px
+            width: 100%
+            padding: 10px 10px 10px 20px
+            margin-bottom: -4px

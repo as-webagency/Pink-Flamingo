@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./favicon/favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header header__shadow">
+        <div class="container">
+            <div class="menu menu__content">
+                <div class="menu__block">
+                    <div class="burger menu__burger">
+                        <img src="./img/menu.png" alt="menu" class="burger__image">
+                    </div>
+                    <a href="index.html" class="logo menu__logo">
+                        <img src="./img/logo.svg" alt="logo" class="logo__image">
+                    </a>
+                </div>
+                <div class="contacts menu__contacts">
+                    <a href="tel:+79652500090" class="phone contacts__phone phone--primary">+7 (965) 250-00-90</a>
+                    <a href="viber://chat?number=+380975345421" target="_blank" class="viber contacts__viber">
+                        <img src="./img/viber.svg" alt="viber" class="contacts__viber-image">
+                    </a>
+                    <a href="https://wa.me/+380975345421" target="_blank" class="whatsapp contacts__whatsapp">
+                        <img src="./img/whatsapp.svg" alt="whatsapp" class="contacts__whatsapp-image">
+                    </a>
+                    <button class="button contacts__button button--primary">Заказать</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="nav nav__block">
+        <div class="nav__top">
+            <a href="index.html" class="nav__logo">
+                <img src="./img/logo.svg" alt="logo" class="nav__image">
+            </a>
+            <button class="nav__close"></button>
+        </div>
+        <div class="nav__bottom">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Поддерживающая уборка</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Комплексная уборка</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Генеральная уборка</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Уборка после ремонта</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Химчистка</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Мытье окон</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="types">
+        <div class="container">
+            <div class="types-cleaning-tabs types-cleaning-tabs__items">
+                <a href="#" class="types-cleaning-tab types-cleaning-tab--active">Поддерживающая<br> уборка</a>
+                <a href="#" class="types-cleaning-tab">Комплексная<br> уборка</a>
+                <a href="#" class="types-cleaning-tab">Генеральная<br> уборка</a>
+                <a href="#" class="types-cleaning-tab">Уборка после<br> ремонта</a>
+                <a href="#" class="types-cleaning-tab">Химчистка</a>
+                <a href="#" class="types-cleaning-tab">Мытье окон</a>
+            </div>
+            <h1 class="title types__title title--primary">Поддерживающая <span>уборка</span></h1>
+            <div class="types-room-tabs types-room-tabs__items">
+                <div class="types-room-tab">
+                    <img src="./img/types/room_1.svg" alt="room_1" class="types-room-tab__image">
+                    <span class="types-room-tab__name">Гостиная</span>
+                </div>
+                <div class="types-room-tab">
+                    <img src="./img/types/room_2.svg" alt="room_2" class="types-room-tab__image">
+                    <span class="types-room-tab__name">Прихожая</span>
+                </div>
+                <div class="types-room-tab">
+                    <img src="./img/types/room_3.png" alt="room_3" class="types-room-tab__image">
+                    <span class="types-room-tab__name">Кухня</span>
+                </div>
+                <div class="types-room-tab">
+                    <img src="./img/types/room_4.svg" alt="room_4" class="types-room-tab__image">
+                    <span class="types-room-tab__name">Ванная комната</span>
+                </div>
+            </div>
+            <div class="types-room-images types-room-images__items">
+                <div class="types-room-image types-room-image--active">
+                    <div class="types-room-image__picture">
+                        <img src="./img/types/clear_1.jpg" alt="clear_1">
+                    </div>
+                </div>
+                <div class="types-room-image">
+                    <div class="types-room-image__picture">
+                        <img src="./img/types/clear_2.jpg" alt="clear_2">
+                    </div>
+                </div>
+                <div class="types-room-image">
+                    <div class="types-room-image__picture">
+                        <img src="./img/types/clear_3.jpg" alt="clear_3">
+                    </div>
+                </div>
+                <div class="types-room-image">
+                    <div class="types-room-image__picture">
+                        <img src="./img/types/clear_4.jpg" alt="clear_4">
+                    </div>
+                </div>
+                <div class="types-room-image">
+                    <div class="types-room-image__picture">
+                        <img src="./img/types/clear_5.jpg" alt="clear_5">
+                    </div>
+                </div>
+                <div class="types-room-image">
+                    <div class="types-room-image__picture">
+                        <img src="./img/types/clear_6.jpg" alt="clear_6">
+                    </div>
+                </div>
+            </div>
+            <div class="types-included types-included__size">
+                <div class="included-content">
+                    <div class="included included__size">
+                        <h2 class="included__title">Что входит <span>в поддерживающую уборку</span></h2>
+                        <p>Это список услуг, которые мы выполняем на каждом объекте.
+                            Также при необходимости Вы можете выбрать дополнительные услуги.
+                            Если Вам необходимо выполнить услугу, которая не представлена в списке, сообщите об этом менеджеру по телефону.
+                            Мы рассмотрим возможность предоставления услуги.</p>
+                        <div class="included-name included-name__size">
+                            <img src="./img/types/room_1.svg" alt="room_1" class="included-name__image">
+                            <span class="included-name__clear">в гостиной</span>
+                        </div>
+                    </div>
+                    <div class="included-wrap">
+                        <ul class="included-list included-list__size">
+                            <li class="included-list__item">
+                                <img src="./img/types/chek.png" alt="chek" class="included-list__image">
+                                <span class="included-list__name">Протираем подоконник</span>
+                            </li>
+                            <li class="included-list__item">
+                                <img src="./img/types/chek.png" alt="chek" class="included-list__image">
+                                <span class="included-list__name">Протираем поверхности до 1,8 м от пола</span>
+                            </li>
+                            <li class="included-list__item">
+                                <img src="./img/types/chek.png" alt="chek" class="included-list__image">
+                                <span class="included-list__name">Моем и протираем зеркала и стеклянные поверхности</span>
+                            </li>
+                            <li class="included-list__item">
+                                <img src="./img/types/chek.png" alt="chek" class="included-list__image">
+                                <span class="included-list__name">Раскладываем вещи</span>
+                            </li>
+                            <li class="included-list__item">
+                                <img src="./img/types/chek.png" alt="chek" class="included-list__image">
+                                <span class="included-list__name">Раскладываем вещи</span>
+                            </li>
+                            <li class="included-list__item">
+                                <img src="./img/types/chek.png" alt="chek" class="included-list__image">
+                                <span class="included-list__name">Заправляем кровать</span>
+                            </li>
+                            <li class="included-list__item">
+                                <img src="./img/types/chek.png" alt="chek" class="included-list__image">
+                                <span class="included-list__name">Пылесосим, моем пол и протираем плинтуса</span>
+                            </li>
+                            <li class="included-list__item">
+                                <img src="./img/types/chek.png" alt="chek" class="included-list__image">
+                                <span class="included-list__name">Выносим мусор</span>
+                            </li>
+                        </ul>
+                        <button class="button button__blick included-wrap__button button--primary">Заказать уборку</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="additionally additionally__bg">
+        <div class="container">
+            <h3 class="title additionally__title title--primary">Дополнительные <span>услуги</span></h3>
+            <div class="additionally-sides additionally-sides__items">
+                <div class="additionally-sides__left">
+                    <ul class="additionally-sides__list">
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/path32-1.png" alt="path32-1">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Мытье окон</h4>
+                                <p>(200 руб/створка+50% зимний 
+                                    тариф/нестандартные окна)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/Group_211.png" alt="Group_211">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Мытье балконных створок</h4>
+                                <p>(300 р/створка)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/Group_210.png" alt="Group_210">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Мытье микроволновки внутри</h4>
+                                <p>(500 р)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/Group_209.png" alt="Group_209">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Мытье кухонной плиты внутри</h4>
+                                <p>(500 р)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/cil_car-alt.png" alt="cil_car-alt">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Доставка спец. оборудования</h4>
+                                <p>(1000 р/по Москве, 1500 по  МО)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/path477.png" alt="path477">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Дополнительные поручения</h4>
+                                <p>(700 р/час - мытье обуви,
+                                    постирать и развесить белье,
+                                    разложить вещи по шкафам, 
+                                    покупка продуктов)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="additionally-sides__center">
+                    <ul class="additionally-sides__list">
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/g100.png" alt="g100">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Мытье холодильника внутри</h4>
+                                <p>(500 р)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/Group_208.png" alt="Group_208">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Мытье вытяжки</h4>
+                                <p>(500 р)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/g222.png" alt="g222">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Протирка зеркал более 5 м</h4>
+                                <p>(100 р кв м)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/g64.png" alt="g64">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Протирка полок внутри</h4>
+                                <p>(100 р/шт)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/et_key.png" alt="et_key">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Доставка ключей</h4>
+                                <p>(300 р/по Москве)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="additionally-sides__right">
+                    <ul class="additionally-sides__list">
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/Group_206.png" alt="Group_206">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Протирка жалюзи</h4>
+                                <p>(250 р/шт)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/Group_207.png" alt="Group_207">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Смена постельного белья</h4>
+                                <p>(200 р/комплект)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/g22.png" alt="g22">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Глажка</h4>
+                                <p>(350 р/30 мин)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/g469.png" alt="g469">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Мытье посуды</h4>
+                                <p>250 р/30 мин)</p>
+                            </div>
+                        </li>
+                        <li class="additionally-sides__item">
+                            <div class="additionally-sides__image">
+                                <img src="./img/additional/path32.png" alt="path32">
+                            </div>
+                            <div class="additionally-sides__block">
+                                <h4 class="additionally-sides__title">Мойка лотка питомца</h4>
+                                <p>(500 р)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="calc">
+                <h5 class="title calc__title title--primary">Калькулятор <span>уборки</span></h5>
+                <div class="calc-box calc-box__size calc-box--primary">
+                    <div class="calc-box-left calc-box-left__item">
+                        <div class="calc-box-left__top">
+                            <div class="calc-box-left__type">
+                                <label for="type" class="calc-box-left__label">Тип уборки</label>
+                                <select id="type" class="calc-box-left__select">
+                                    <option value="">Комплексная уборка</option>
+                                    <option value="">Поддерживающая уборка</option>
+                                    <option value="">Генеральная уборка</option>
+                                    <option value="">Уборка после ремонта</option>
+                                    <option value="">Химчистка</option>
+                                    <option value="">Мытье окон</option>
+                                </select>
+                            </div>
+                            <div class="calc-box-left__room">
+                                <label for="room" class="calc-box-left__label">Помещение</label>
+                                <select id="room" class="calc-box-left__select">
+                                    <option value="">Квартира</option>
+                                    <option value="">Дом</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="calc-box-left__center">
+                            <label for="center-range" class="calc-box-left__label">Общая площадь для уборки</label>
+                            <div class="calc-box-left__center-wrap">
+                                <input type="range" class="calc-box-left__range" id="center-range" step="1" min="20" max="150" value="20">
+                                <div class="calc-box-left__count"><span id="count">50</span>м 2</div>
+                            </div>
+                        </div>
+                        <div class="calc-box-left__bottom">
+                            <div class="calc-box-left__bottom-box">
+                                <span class="calc-box-left__bottom-text">Примерная стоимость уборки:</span>
+                                <span class="calc-box-left__bottom-total" id="total">от 6000 руб</span>
+                            </div>
+                            <div class="calc-box-left__bottom-mini">* расчет представлен в ознакомительных целях, точную стоимость уточняйте у менеджера по телефону."</div>
+                        </div>
+                    </div>
+                    <div class="calc-box-right calc-box-right__item">
+                        <h6 class="calc-box-right__title">Отправить нам заявку онлайн</h6>
+                        <form action="#" class="form calc-box-right__form" method="post">
+                            <div class="calc-box-right__group">
+                                <input type="text" class="input calc-box-right__input" name="user_name" placeholder="Как к Вам обращаться?">
+                            </div>
+                            <div class="calc-box-right__group">
+                                <input type="tel" class="input calc-box-right__input" name="user_phone" placeholder="Номер телефона*">
+                            </div>
+                            <div class="calc-box-right__group">
+                                <input type="text" class="input calc-box-right__input" name="user_text" placeholder="Комментарий">
+                            </div>
+                            <div class="calc-box-right__group">
+                                <input type="checkbox" id="label-policy" name="user_checkbox" class="calc-box-right__input-policy">
+                                <label for="label-policy" class="calc-box-right__label-policy">Даю согласие на обработку персональных данных</label>
+                            </div>
+                            <button class="button button__blik calc-box-right__button button--primary">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="steps">
+        <div class="steps-top steps-top__size">
+            <div class="container">
+                <div class="steps-top-blocks">
+                    <div class="steps-top-block">
+                        <div class="steps-top-block__image">
+                            <img src="./img/resume.svg" alt="resume">
+                        </div>
+                        <p class="steps-top-block__text">Индивидуальный подход
+                            к каждому клиенту</p>
+                    </div>
+                    <div class="steps-top-block">
+                        <div class="steps-top-block__image">
+                            <img src="./img/experienced.svg" alt="experienced">
+                        </div>
+                        <p class="steps-top-block__text">Опытные сотрудники</p>
+                    </div>
+                    <div class="steps-top-block">
+                        <div class="steps-top-block__image">
+                            <img src="./img/layer.svg" alt="layer">
+                        </div>
+                        <p class="steps-top-block__text">Профессиональное оборудование</p>
+                    </div>
+                    <div class="steps-top-block">
+                        <div class="steps-top-block__image">
+                            <img src="./img/safety.svg" alt="safety">
+                        </div>
+                        <p class="steps-top-block__text">Безопасные средства
+                            ведущих европейских
+                            производителей</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="steps-bottom steps-bottom__size">
+            <div class="container">
+                <div class="steps-sides">
+                    <div class="steps-sides__left">
+                        <div class="steps-sides__left-number">4</div>
+                        <h2 class="steps-sides__left-title"> шага к чистоте Вашего дома</h2>
+                    </div>
+                    <div class="steps-sides__right">
+                        <div class="steps-sides__right-block wow bounceInRight" data-wow-delay="1.5s">
+                            <div class="steps-sides__right-number">1</div>
+                            <div class="steps-sides__right-text">Оставляете заявку любым 
+                                удобным для Вас способом 
+                                (звонок или сообщение 
+                                в мессенджерах)</div>
+                        </div>
+                        <div class="steps-sides__right-block wow bounceInRight" data-wow-delay="1.8s">
+                            <div class="steps-sides__right-number">2</div>
+                            <div class="steps-sides__right-text">Мы Уточняем детали заказа 
+                                (наш специалист связывается с Вами, 
+                                чтобы обсудить детали заказа
+                                 день/время/обьем работ/ 
+                                рассчитываем точную стоимость; 
+                                при необходимости выезжаем 
+                                на предварительный осмотр)</div>
+                        </div>
+                        <div class="steps-sides__right-block wow bounceInRight" data-wow-delay="2.5s">
+                            <div class="steps-sides__right-number">3</div>
+                            <div class="steps-sides__right-text">Выезжаем на обьект 
+                                (в назначенное время приезжает 
+                                наш клинер/бригада 
+                                клинеров и наводит чистоту)</div>
+                        </div>
+                        <div class="steps-sides__right-block wow bounceInRight" data-wow-delay="2.8s">
+                            <div class="steps-sides__right-number">4</div>
+                            <div class="steps-sides__right-text">Прием и оплата работы 
+                                (Вы оцениваете результат 
+                                и оплачиваете услугу 
+                                по окончании уборки)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery gallery__bg gallery--primary">
+        <div class="container">
+            <div class="gallery-blocks">
+                <div class="gallery-block">
+                    <div class="gallery-block__image">
+                        <a data-fancybox="gallery" href="./img/gallery/gallery1_big.jpg.jpg">
+                            <img src="./img/gallery/gallery1.jpg" alt="gallery1">
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery-block">
+                    <div class="gallery-block__image">
+                        <a data-fancybox="gallery" href="./img/gallery/gallery2_big.jpg">
+                            <img src="./img/gallery/gallery2.jpg" alt="gallery2">
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery-block">
+                    <div class="gallery-block__image">
+                        <a data-fancybox="gallery" href="./img/gallery/gallery3_big.jpg">
+                            <img src="./img/gallery/gallery3.jpg" alt="gallery3">
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery-block">
+                    <div class="gallery-block__image">
+                        <a data-fancybox="gallery" href="./img/gallery/gallery4_big.jpg">
+                            <img src="./img/gallery/gallery4.jpg" alt="gallery4">
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery-block">
+                    <div class="gallery-block__image">
+                        <a data-fancybox="gallery" href="./img/gallery/gallery5_big.jpg">
+                            <img src="./img/gallery/gallery5.jpg" alt="gallery5">
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery-block">
+                    <div class="gallery-block__image">
+                        <a data-fancybox="gallery" href="./img/gallery/gallery6_big.jpg">
+                            <img src="./img/gallery/gallery6.jpg" alt="gallery6">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="faq faq__bg">
+        <div class="container">
+            <h2 class="title faq__title title--primary">Часто задаваемые <span>вопросы</span></h2>
+            <div class="faq-accordion faq-accordion__size">
+                <div class="accordion accordion__size accordion--open">
+                    <h3 class="accordion__title accordion__title--open">Обязательно ли присутствовать во время уборки?</h3>
+                    <p>Мы работаем без выходных, бригада приедет  в удобное для Вас время 
+                        (помимо утренних и дневных уборок, у нас также проводятся уборки
+                        в вечернее и ночное время</p>
+                </div>
+                <div class="accordion accordion__size">
+                    <h3 class="accordion__title">От чего зависит время уборки?</h3>
+                    <p>Мы работаем без выходных, бригада приедет  в удобное для Вас время 
+                        (помимо утренних и дневных уборок, у нас также проводятся уборки
+                        в вечернее и ночное время</p>
+                </div>
+                <div class="accordion accordion__size">
+                    <h3 class="accordion__title">Сколько клинеров приезжают на уборку?</h3>
+                    <p>Мы работаем без выходных, бригада приедет  в удобное для Вас время 
+                        (помимо утренних и дневных уборок, у нас также проводятся уборки
+                        в вечернее и ночное время</p>
+                </div>
+                <div class="accordion accordion__size">
+                    <h3 class="accordion__title">Смогут ли клинеры очистить диван/ковры/ковролин от пятен?</h3>
+                    <p>Мы работаем без выходных, бригада приедет  в удобное для Вас время 
+                        (помимо утренних и дневных уборок, у нас также проводятся уборки
+                        в вечернее и ночное время</p>
+                </div>
+                <div class="accordion accordion__size">
+                    <h3 class="accordion__title">Сколько клинеров приезжают на уборку?</h3>
+                    <p>Мы работаем без выходных, бригада приедет  в удобное для Вас время 
+                        (помимо утренних и дневных уборок, у нас также проводятся уборки
+                        в вечернее и ночное время</p>
+                </div>
+                <div class="accordion accordion__size">
+                    <h3 class="accordion__title">Может ли измениться стоимость от изначально оговоренной?</h3>
+                    <p>Мы работаем без выходных, бригада приедет  в удобное для Вас время 
+                        (помимо утренних и дневных уборок, у нас также проводятся уборки
+                        в вечернее и ночное время</p>
+                </div>
+                <div class="accordion accordion__size">
+                    <h3 class="accordion__title">Может ли измениться стоимость от изначально оговоренной?</h3>
+                    <p>Мы работаем без выходных, бригада приедет  в удобное для Вас время 
+                        (помимо утренних и дневных уборок, у нас также проводятся уборки
+                        в вечернее и ночное время</p>
+                </div>
+                <div class="accordion accordion__size">
+                    <h3 class="accordion__title">Может ли измениться стоимость от изначально оговоренной?</h3>
+                    <p>Мы работаем без выходных, бригада приедет  в удобное для Вас время 
+                        (помимо утренних и дневных уборок, у нас также проводятся уборки
+                        в вечернее и ночное время</p>
+                </div>
+            </div>
+            <div class="faq__more">смотреть еще</div>
+        </div>
+    </section>
+    <section class="reviews reviews__bg">
+        <div class="container">
+            <h2 class="title reviews__title title--primary">Отзывы наших <span>клиентов</span></h2>
+            <div class="reviews-slider reviews-slider__size">
+                <div class="reviews-slide">
+                    <div class="reviews-slide__item">
+                        <div class="reviews-slide__block">
+                            <div class="reviews-slide__image">
+                                <img src="./img/reviews/reviews_1.jpg" alt="reviews_1">
+                            </div>
+                            <div class="reviews-slide__pesonal">
+                                <h3 class="reviews-slide__name">Наталья</h3>
+                                <p>Заказывала уборку после ремонта. Осталась довольна работой сотрудников “Розовый Фламинго”</p>
+                            </div>
+                        </div>
+                        <div class="reviews-slide__block">
+                            <div class="reviews-slide__image">
+                                <img src="./img/reviews/reviews_1.jpg" alt="reviews_1">
+                            </div>
+                            <div class="reviews-slide__pesonal">
+                                <h3 class="reviews-slide__name">Наталья</h3>
+                                <p>Заказывала уборку после ремонта. Осталась довольна работой сотрудников “Розовый Фламинго”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-slide__item">
+                        <div class="reviews-slide__block">
+                            <div class="reviews-slide__image">
+                                <img src="./img/reviews/reviews_1.jpg" alt="reviews_1">
+                            </div>
+                            <div class="reviews-slide__pesonal">
+                                <h3 class="reviews-slide__name">Наталья</h3>
+                                <p>Заказывала уборку после ремонта. Осталась довольна работой сотрудников “Розовый Фламинго”</p>
+                            </div>
+                        </div>
+                        <div class="reviews-slide__block">
+                            <div class="reviews-slide__image">
+                                <img src="./img/reviews/reviews_1.jpg" alt="reviews_1">
+                            </div>
+                            <div class="reviews-slide__pesonal">
+                                <h3 class="reviews-slide__name">Наталья</h3>
+                                <p>Заказывала уборку после ремонта. Осталась довольна работой сотрудников “Розовый Фламинго”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-slide__item">
+                        <div class="reviews-slide__block">
+                            <div class="reviews-slide__image">
+                                <img src="./img/reviews/reviews_1.jpg" alt="reviews_1">
+                            </div>
+                            <div class="reviews-slide__pesonal">
+                                <h3 class="reviews-slide__name">Наталья</h3>
+                                <p>Заказывала уборку после ремонта. Осталась довольна работой сотрудников “Розовый Фламинго”</p>
+                            </div>
+                        </div>
+                        <div class="reviews-slide__block">
+                            <div class="reviews-slide__image">
+                                <img src="./img/reviews/reviews_1.jpg" alt="reviews_1">
+                            </div>
+                            <div class="reviews-slide__pesonal">
+                                <h3 class="reviews-slide__name">Наталья</h3>
+                                <p>Заказывала уборку после ремонта. Осталась довольна работой сотрудников “Розовый Фламинго”</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact contact__bg">
+        <div class="container">
+            <div class="contact-sides">
+                <div class="contact-sides__left">
+                    <a href="index.html" class="contact-sides__link">
+                        <img src="./img/footer-logo.png" alt="footer-logo" class="contact-sides__left-image">
+                    </a>
+                </div>
+                <div class="contact-sides__right">
+                    <h2 class="title contact-sides__right-title title--primary">У вас остались <span>вопросы?</span></h2>
+                    <form action="#" class="form contact-sides__form" method="post">
+                        <div class="contact-sides__column">
+                            <div class="contact-sides__group">
+                                <label for="label-name" class="contact-sides__label">Как к Вам обращаться?</label>
+                                <input type="text" id="label-name" class="input contact-sides__input" name="user_name" required>
+                            </div>
+                            <div class="contact-sides__group">
+                                <label for="label-phone" class="contact-sides__label">Номер телефона*</label>
+                                <input type="text" id="label-phone" class="input contact-sides__input" name="user_phone" required>
+                            </div>
+                            <div class="contact-sides__group">
+                                <label for="label-phone" class="contact-sides__label">Способ связи</label>
+                                <div class="contact-sides__choice">
+                                    <select name="user_select" id="label-phone" class="select contact-sides__select">
+                                        <option value="Позвонить">Позвонить</option>
+                                        <option value="Viber">Viber</option>
+                                        <option value="Whatsapp">Whatsapp</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-sides__column">
+                            <div class="contact-sides__group">
+                                <label for="label-text" class="contact-sides__label">Ваш вопрос</label>
+                                <textarea name="user_text" id="label-text" class="textarea contact-sides__textarea"></textarea>
+                            </div>
+                            <div class="contact-sides__group">
+                                <input type="checkbox" id="label-policy" name="user_checkbox" class="contact-sides__input-policy">
+                                <label for="label-policy" class="contact-sides__label-policy">Даю согласие на обработку персональных данных</label>
+                            </div>
+                            <button class="button button__blick contact-sides__button button--primary">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer footer--primary">
+        <div class="container">
+            <div class="footer-side">
+                <div class="footer-side__left">
+                    <ul class="footer-side__left-list">
+                        <li class="footer-side__left-item">
+                            <a href="#" class="footer-side__left-link">О нас</a>
+                        </li>
+                        <li class="footer-side__left-item">
+                            <a href="#" class="footer-side__left-link">Контакты</a>
+                        </li>
+                        <li class="footer-side__left-item">
+                            <a href="#" class="footer-side__left-link">Политика конфиденциальности</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-side__center">
+                    <ul class="footer-side__center-list">
+                        <li class="footer-side__center-item">
+                            <a href="#" class="footer-side__center-link">Комплексная уборка</a>
+                        </li>
+                        <li class="footer-side__center-item">
+                            <a href="#" class="footer-side__center-link">Генеральная уборка</a>
+                        </li>
+                        <li class="footer-side__center-item">
+                            <a href="#" class="footer-side__center-link">Уборка после ремонта</a>
+                        </li>
+                        <li class="footer-side__center-item">
+                            <a href="#" class="footer-side__center-link">Химчистка</a>
+                        </li>
+                        <li class="footer-side__center-item">
+                            <a href="#" class="footer-side__center-link">Мытье окон</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-side__right">
+                    <p>Розовый Фламинго<br>
+                        2020</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mask-nav"></div>
+
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

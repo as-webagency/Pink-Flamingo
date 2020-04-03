@@ -1,0 +1,196 @@
+.calc
+    &__title
+        margin-left: 75px
+        margin-bottom: 35px
+        font-weight: bold
+    &-box
+        border-radius: 5px
+        padding: 26px 29px 38px 68px
+        +flex-wrap
+        justify-content: space-between
+        &__size
+            max-width: 1270px
+            width: 102%
+            margin: 0 auto
+        &--primary
+            background-color: $light
+            box-shadow: 0px 2px 13px rgba($black, 0.25)
+        &-left
+            &__item
+                max-width: 685px
+                width: 100%
+            &__top
+                padding-top: 13px
+                +flex-wrap
+                margin-bottom: 40px
+            &__label
+                font-weight: 600
+                font-size: 14px
+                line-height: 19px
+                margin-bottom: 10px
+                display: block
+            &__type,
+            &__room
+                max-width: 332px
+                width: 100%
+            &__type
+                margin-right: 20px
+            &__select
+                width: 100%
+                height: 47px
+                background-color: $light
+                border: 1px solid $dark
+                border-radius: 5px
+                padding-left: 20px
+                appearance: none
+                background: url('../img/arrow_down.png') no-repeat
+                background-position: 300px 20px
+            &__range
+                appearance: none
+                width: 100%
+                max-width: 597px
+                &::-webkit-slider-runnable-track
+                    width: 100%
+                    height: 6px
+                    cursor: pointer
+                    background-color: $dark
+                &::-webkit-slider-thumb
+                    height: 32px
+                    width: 32px
+                    border-radius: 50%
+                    background-color: $darkPink
+                    cursor: pointer
+                    appearance: none
+                    margin-top: -13px
+                &:focus
+                    &::-webkit-slider-runnable-track
+                        background-color: $dark
+                &::-moz-range-track
+                    width: 100%
+                    height: 6px
+                    cursor: pointer
+                    background-color: $dark
+                &::-moz-range-thumb
+                    height: 32px
+                    width: 32px
+                    border-radius: 50%
+                    background-color: $darkPink
+                    cursor: pointer
+                    appearance: none
+                    margin-top: -13px
+                &::-ms-track
+                    width: 100%
+                    height: 6px
+                    cursor: pointer
+                    background: 0 0
+                    border-color: transparent
+                    color: transparent
+
+                &::-ms-fill-lower,
+                &::-ms-fill-upper
+                    background-color: $dark
+                    border-radius: 50%
+                &::-ms-thumb
+                    width: 32px
+                    border-radius: 50%
+                    background-color: $dark
+                    cursor: pointer
+                    height: 6px
+                &:focus::-ms-fill-lower,
+                &:focus::-ms-fill-upper
+                    background-color: $dark
+            &__count
+                margin-top: -3px
+                width: 74px
+                height: 47px
+                background-color: $light
+                border: 1px solid $dark
+                border-radius: 5px
+                +flex-content-center
+                #count
+                    font-size: 14px
+                    line-height: 19px
+                    color: $black
+                    margin-right: 5px
+            &__center
+                &-wrap
+                    margin-top: 19px
+                    margin-bottom: 37px
+                    +flex
+                    justify-content: space-between
+            &__bottom
+                &-box
+                    padding: 23px 16px 21px 24px
+                    margin-bottom: 14px
+                    background-color: $light
+                    border: 1px solid $dark
+                    border-radius: 5px
+                    width: 100%
+                    height: 71px
+                    +flex-wrap
+                    justify-content: space-between
+                &-text
+                    font-size: 20px
+                    line-height: 27px
+                    color: $black
+                &-total
+                    font-weight: bold
+                    font-size: 20px
+                    line-height: 27px
+                    color: $darkPink
+                &-mini
+                    font-size: 10px
+                    line-height: 14px
+                    color: $dark
+        &-right
+            &__item
+                max-width: 397px
+                width: 100%
+            &__title
+                color: $black
+                font-weight: normal
+                font-size: 16px
+                line-height: 22px   
+                margin: 0 0 19px   
+                text-align: center 
+            &__input
+                height: 47px
+                padding: 0 20px
+                color: $black
+                font-size: 14px
+                border: 1px solid $dark
+                &::placeholder
+                    color: $black
+                    opacity: 1
+                &-policy
+                    opacity: 0
+                    visibility: hidden
+                    &:checked + 
+                        .calc-box-right__label-policy
+                            &::before
+                                background: $lightGrey url(../img/check.png) center no-repeat
+            &__group
+                margin-bottom: 28px
+                &:nth-child(3)
+                    margin-bottom: -6px
+                &:nth-child(4)
+                    margin-bottom: 38px
+            &__label
+                &-policy
+                    font-size: 12px
+                    color: $black
+                    +flex
+                    align-items: center
+                    &::before
+                        content: ''
+                        width: 18px
+                        height: 18px
+                        background-color: $lightGrey
+                        border: 1px solid $lightGrey
+                        margin-right: 12px
+                        cursor: pointer
+            &__button
+                max-width: 397px
+                height: 54px
+                width: 100%
+                padding: 10px 10px 10px 22px

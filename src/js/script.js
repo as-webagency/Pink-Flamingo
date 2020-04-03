@@ -61,7 +61,14 @@ $(document).ready(function () {
     });
 
     // Wow
-    new WOW().init();
+    if(screen.width > 768) {
+        new WOW().init();
+    }
+
+    // Удалить кнопку - More
+    if(screen.width < 564) {
+        $('.faq__more').css('display', 'none');
+    }
     
     // Меню
     const toggleMenu = () => {
