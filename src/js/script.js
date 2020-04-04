@@ -98,7 +98,110 @@ $(document).ready(function () {
         });
 
     };
-
     toggleMenu();
+
+    // Подсказки
+    $(document).ready(function () {
+        toolTiper();
+    });
+
+    function toolTiper(effect) {
+        $('.tooltiper').each(function () {
+            var eLcontent = $(this).attr('data-tooltip'),
+                eLtop = $(this).position().top,
+                eLleft = $(this).position().left;
+            $(this).append('<span class="tooltip">' + eLcontent + '</span>');
+            var eLtw = $(this).find('.tooltip').width(),
+                eLth = $(this).find('.tooltip').height();
+            $(this).find('.tooltip').css({
+                "top": (0 - eLth - 35) + 'px',
+                "left": '-100px'
+            });
+        });
+    }
+
+    // Калькулятор
+    const calc = () => {
+        const calcBox = document.querySelector(".calc-box-left");
+        const rangeInput = document.getElementById("center-range");
+        const rangeCount = document.getElementById("count");
+        const total = document.getElementById("total");
+        const typeSelect = document.getElementById("type");
+        const roomSelect = document.getElementById("room");
+      
+        const variants = [
+          [2500, 3000, 3500, 4000, 4500, 5000, 0],
+          [3500, 4500, 6000, 7500, 9000, 10500, 0],
+          [4500, 6000, 7500, 9000, 10500, 12000, 0],
+          [5000, 6500, 8000, 9500, 11000, 12500, 0],
+        ];
+      
+        let result = 0,
+          type = 0,
+          index = 0,
+          room = 1,
+          variant = variants[type][index];
+      
+        const resetForm = () => {
+          rangeInput.value = 20;
+          rangeCount.value = rangeInput.value;
+          index = 0;
+        };
+      
+        const checkIndex = () => {
+          variant = variants[type][index];
+        };
+      
+        const giveResult = () => {
+          return (result + variant) * room;
+        };
+      
+        const exitTotal = () => {
+          total.textContent = giveResult();
+        };
+      
+        //   после загрузки страницы меняем value rangeCount
+        rangeCount.value = rangeInput.value;
+        total.textContent = giveResult();
+      
+        rangeInput.addEventListener("change", (event) => {
+          const target = event.target;
+      
+          rangeCount.value = target.value;
+          if (rangeCount.value <= 50) {
+            index = 0;
+          } else if (rangeCount.value <= 70) {
+            index = 1;
+          } else if (rangeCount.value <= 90) {
+            index = 2;
+          } else if (rangeCount.value <= 110) {
+            index = 3;
+          } else if (rangeCount.value <= 130) {
+            index = 4;
+          } else if (rangeCount.value <= 150) {
+            index = 5;
+          } else {
+            index = 6;
+          }
+          checkIndex();
+          exitTotal();
+        });
+      
+        typeSelect.addEventListener("change", (event) => {
+          resetForm();
+          type = +event.target.value - 1;
+          checkIndex();
+          exitTotal();
+        });
+      
+        roomSelect.addEventListener("change", (event) => {
+          resetForm();
+          room = +event.target.value;
+          checkIndex();
+          exitTotal();
+        });
+    };
+    calc();
+      
 
 });

@@ -100,18 +100,23 @@
                 &:focus::-ms-fill-upper
                     background-color: $dark
             &__count
-                margin-top: -3px
-                width: 74px
-                height: 47px
-                background-color: $light
-                border: 1px solid $dark
-                border-radius: 5px
-                +flex-content-center
-                #count
+                position: relative
+                &-metr
+                    margin-top: -3px
+                    width: 74px
+                    height: 47px
+                    background-color: $light
+                    border: 1px solid $dark
+                    border-radius: 5px
+                    +flex-content-center
                     font-size: 14px
                     line-height: 19px
                     color: $black
-                    margin-right: 5px
+                    padding-left: 10px
+                span
+                    position: absolute
+                    right: 11px
+                    top: 12px
             &__center
                 &-wrap
                     margin-top: 19px
