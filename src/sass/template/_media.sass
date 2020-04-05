@@ -13,7 +13,66 @@
     .hero
         &__bg
             background-position: center
+@media (max-width: 1300px)
+    .additionally
+        &-sides
+            &__items
+                margin-left: 0
+    .types
+        &-cleaning
+            &-tabs
+                &__items
+                    margin: 0 0 72px
+        &-room
+            &-images
+                &__items
+                    margin: 0 auto 34px
+        &__title
+            margin: 0 0 69px
+    .calc
+        &-box
+            &__size
+                width: 100%
+        &__title
+            margin-left: 0
+    .additionally
+        padding: 140px 0 0
+@media (max-width: 1285px)
+    .included
+        &-wrap
+            &__button
+                margin: 40px auto 0
+@media (max-width: 1230px)
+    .calc
+        &-box
+            +flex-column-center
+            padding: 25px
+            &-left
+                &__item
+                    margin-bottom: 30px
+            &-right
+                &__button
+                    padding: 10px
+    .additionally
+        padding: 0
+        &__bg
+            background-size: cover
+        &__title
+            margin-top: 80px
+            margin-left: 0
+        &-sides
+            &__items
+                margin-bottom: 70px
+    .included
+        &-wrap
+            &__button
+                padding: 10px
 @media (max-width: 1200px)
+    .additionally
+        &-sides
+            &__items
+                max-width: 900px
+                margin: 0 auto 50px
     .contact
         &-sides
             align-items: center
@@ -50,6 +109,21 @@
                 max-width: 233px
                 height: 148px
 @media (max-width: 1140px)
+    .types
+        padding-top: 55px
+        &-cleaning
+            &-tabs
+                &__items
+                    margin: 0 0 50px
+        &__title
+            margin: 0 0 40px
+        &-room
+            &-tabs
+                &__items
+                    margin: 0 auto 30px
+        &-included
+            &__size
+                margin-left: 0
     .steps
         &-top 
             .container
@@ -79,6 +153,14 @@
             font-size: 25px
             line-height: 34px
 @media (max-width: 1070px)
+    .types
+        &-room
+            &-image
+                &__picture
+                    height: auto
+    .additionally
+        &__title
+            margin: 40px 0
     .reviews
         &-slider
             &__size
@@ -122,6 +204,24 @@
                     line-height: 33px
                     max-width: 200px
 @media (max-width: 992px)
+    .types
+        padding-top: 25px
+        &-cleaning
+            &-tab
+                padding: 10px 0
+                border: 1px solid transparent
+                &s
+                    flex-wrap: wrap
+                    height: auto
+                    border: none
+        &-room
+            &-tab
+                margin-bottom: 20px
+                flex-direction: column
+                width: 99px
+                &s
+                    &__items
+                        max-width: 260px
     .accordion
         &__size
             margin-left: 0
@@ -170,7 +270,37 @@
                     &:nth-child(3)
                         margin-right: 20px
                         margin-top: -110px
+@media (max-width: 830px)
+    .additionally
+        &-sides
+            &__items
+                max-width: 400px
+                margin: 0 auto 25px
+    .included
+        &-list
+            &__size
+                flex-direction: column
+                margin-left: 0
 @media (max-width: 768px)
+    .calc
+        &-box
+            &-left
+                &__top
+                    padding-top: 0
+                &__type
+                    max-width: 100%
+                    margin-right: 0
+                    margin-bottom: 25px
+                &__room
+                    max-width: 100%
+                &__select
+                    background-position: 97% 20px
+                &__range
+                    max-width: 400px
+                &__count
+                    span
+                        font-size: 14px
+                        top: 13px
     .steps
         &-sides
             &__left
@@ -413,6 +543,39 @@
                         &::after
                             display: none
 @media (max-width: 564px)
+    .calc
+        &-box
+            &-left
+                &__center
+                    &-wrap
+                        margin-top: 50px
+                        position: relative
+                &__count 
+                    position: static
+                    &-metr
+                        position: absolute
+                        top: -38px
+                        left: 0
+                        width: 40px
+                        height: 22px
+                        text-align: center
+                        padding-left: 0
+                        border: 1px solid $lightGrey
+                        border-radius: 8px
+                        font-size: 14px
+                        color: $darkPink
+                    span
+                        display: none
+                &__range
+                    max-width: 100%
+                &__bottom
+                    &-box
+                        +flex-column-center
+                        height: auto
+                        padding: 15px 10px
+                    &-text
+                        font-size: 16px
+                        line-height: 22px
     .faq
         &__bg
             min-height: 840px
@@ -423,6 +586,22 @@
         &__size
             height: 560px
 @media (max-width: 520px)
+    .types 
+        .types
+            &-room
+                &-image 
+                    .types
+                        &-block
+                            &__pulse
+                                width: 10px
+                                height: 10px
+    .included
+        &__title
+            text-align: center
+        &-list
+            &__item
+                max-width: none
+                width: 100%
     .steps
         padding: 70px 0 0
     .footer
@@ -524,7 +703,34 @@
         &-slider
             &__size
                 max-width: 290px
+@media (max-width: 390px)
+    .modal
+        &-callback
+            &__title
+                font-size: 18px
+                margin: 20px auto
+                line-height: 24px
+            &__label
+                &-policy
+                    font-size: 10px
 @media (max-width: 380px)
+    .types
+        &__title
+            font-size: 18px
+        &-cleaning
+            &-tabs
+                &__items
+                    margin: 0 0 20px
+    .additionally
+        &__title
+            font-size: 18px
+        &-sides
+            &__title
+                font-size: 16px
+                line-height: 22px
+            p
+                font-size: 14px
+                line-height: 19px
     .contact-sides
         &__input, 
         &__choice,
@@ -555,6 +761,11 @@
             max-width: 228px
             margin: 21px auto 20px
 @media (max-width: 347px)
+    .additionally
+        .container
+            padding: 0 5px
+    .calc-box
+        padding: 20px 10px
     .accordion
         padding: 10px 10px 0 10px
         &__title
@@ -567,7 +778,10 @@
         &-accordion
             &__size
                 height: 560px
-@media (max-width: 336px)
+@media (max-width: 337px)
+    .modal
+        &-callback
+            padding: 20px 15px
     .reviews
         &-slide
             &__pesonal

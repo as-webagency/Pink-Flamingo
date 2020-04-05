@@ -50,39 +50,45 @@
                 font-size: 20px
                 line-height: 27px
                 color: $black
-            &--active,
+            &--active
+                .types-room-tab
+                    &__name
+                        color: $darkPink
             &:hover
                 .types-room-tab
                     &__name
                         color: $darkPink
         &-image
             display: none
-            &--active
-                display: block
             &s
                 &__items
                     max-width: 1304px
-                    height: 698px
                     margin: 0 auto 34px 16px
             &__picture
                position: relative
+               overflow: hidden
+               height: 698px
     &-included
         &__size
             margin-left: 20px
     .types-room-image
+        .types 
+            &-block
+                &__pulse
+                    position: absolute
+                    z-index: 5
+                    display: block
+                    width: 23px
+                    height: 23px
+                    border-radius: 50%
+                    background-color: $lightPink
+                    cursor: pointer
+                    box-shadow: 0 0 0 rgba($lightPink, 0.36)
+                    animation: pulse 2s infinite
         &:nth-child(1)
             .types 
                 &-block
                     &__pulse
-                        position: absolute
-                        display: block
-                        width: 23px
-                        height: 23px
-                        border-radius: 50%
-                        background-color: $lightPink
-                        cursor: pointer
-                        box-shadow: 0 0 0 rgba($lightPink, 0.36)
-                        animation: pulse 2s infinite
                         &:nth-child(1)
                             top: 44.1%
                             right: 42.5%
@@ -105,15 +111,6 @@
             .types 
                 &-block
                     &__pulse
-                        position: absolute
-                        display: block
-                        width: 23px
-                        height: 23px
-                        border-radius: 50%
-                        background-color: $lightPink
-                        cursor: pointer
-                        box-shadow: 0 0 0 rgba($lightPink, 0.36)
-                        animation: pulse 2s infinite
                         &:nth-child(1)
                             top: 26%
                             right: 38.5%
@@ -136,30 +133,21 @@
             .types 
                 &-block
                     &__pulse
-                        position: absolute
-                        display: block
-                        width: 23px
-                        height: 23px
-                        border-radius: 50%
-                        background-color: $lightPink
-                        cursor: pointer
-                        box-shadow: 0 0 0 rgba($lightPink, 0.36)
-                        animation: pulse 2s infinite
                         &:nth-child(1)
-                            top: 26%
-                            right: 38.5%
+                            top: 40%
+                            right: 53%
                         &:nth-child(2)
-                            top: 43%
-                            right: 42%
+                            top: 64%
+                            right: 39%
                         &:nth-child(3)
-                            top: 60%
-                            right: 55%
+                            top: 52%
+                            right: 98%
                         &:nth-child(4)
-                            top: 79%
-                            right: 63%
-                        &:nth-child(5)
-                            top: 92%
+                            top: 68%
                             right: 78%
+                        &:nth-child(5)
+                            top: 90%
+                            right: 74%
                         &:nth-child(6)
                             top: 92%
                             right: 45%
@@ -167,95 +155,77 @@
             .types 
                 &-block
                     &__pulse
-                        position: absolute
-                        display: block
-                        width: 23px
-                        height: 23px
-                        border-radius: 50%
-                        background-color: $lightPink
-                        cursor: pointer
-                        box-shadow: 0 0 0 rgba($lightPink, 0.36)
-                        animation: pulse 2s infinite
                         &:nth-child(1)
-                            top: 26%
-                            right: 38.5%
+                            top: 29%
+                            right: 47%
                         &:nth-child(2)
                             top: 43%
                             right: 42%
                         &:nth-child(3)
-                            top: 60%
-                            right: 55%
+                            top: 61%
+                            right: 61%
                         &:nth-child(4)
-                            top: 79%
-                            right: 63%
+                            top: 62%
+                            right: 53%
                         &:nth-child(5)
-                            top: 92%
-                            right: 78%
+                            top: 90%
+                            right: 49%
                         &:nth-child(6)
-                            top: 92%
-                            right: 45%
+                            top: 73%
+                            right: 36%
+                        &:nth-child(7)
+                            top: 84%
+                            right: 21%
         &:nth-child(5)
             .types 
                 &-block
                     &__pulse
-                        position: absolute
-                        display: block
-                        width: 23px
-                        height: 23px
-                        border-radius: 50%
-                        background-color: $lightPink
-                        cursor: pointer
-                        box-shadow: 0 0 0 rgba($lightPink, 0.36)
-                        animation: pulse 2s infinite
                         &:nth-child(1)
-                            top: 26%
-                            right: 38.5%
+                            top: 14%
+                            right: 46%
                         &:nth-child(2)
-                            top: 43%
-                            right: 42%
+                            top: 32%
+                            right: 39%
                         &:nth-child(3)
-                            top: 60%
-                            right: 55%
+                            top: 54%
+                            right: 25%
                         &:nth-child(4)
-                            top: 79%
-                            right: 63%
+                            top: 80%
+                            right: 32%
                         &:nth-child(5)
-                            top: 92%
-                            right: 78%
+                            top: 87%
+                            right: 29%
                         &:nth-child(6)
-                            top: 92%
-                            right: 45%
+                            top: 85%
+                            right: 22%
+                        &:nth-child(7)
+                            top: 83%
+                            right: 9%
         &:nth-child(6)
             .types 
                 &-block
                     &__pulse
-                        position: absolute
-                        display: block
-                        width: 23px
-                        height: 23px
-                        border-radius: 50%
-                        background-color: $lightPink
-                        cursor: pointer
-                        box-shadow: 0 0 0 rgba($lightPink, 0.36)
-                        animation: pulse 2s infinite
                         &:nth-child(1)
-                            top: 26%
-                            right: 38.5%
+                            top: 54%
+                            right: 54%
                         &:nth-child(2)
-                            top: 43%
-                            right: 42%
+                            top: 52%
+                            right: 35%
                         &:nth-child(3)
-                            top: 60%
-                            right: 55%
+                            top: 62%
+                            right: 53%
                         &:nth-child(4)
-                            top: 79%
-                            right: 63%
+                            top: 62%
+                            right: 60%
                         &:nth-child(5)
-                            top: 92%
-                            right: 78%
+                            top: 74%
+                            right: 34%
                         &:nth-child(6)
-                            top: 92%
-                            right: 45%
+                            top: 90%
+                            right: 49%
+                        &:nth-child(7)
+                            top: 84%
+                            right: 22%
 @keyframes pulse
     0%
         box-shadow: 0 0 0 0 rgba($lightPink, 0.36)
@@ -264,6 +234,7 @@
     100%
         box-shadow: 0 0 0 0 rgba($lightPink, 0)
 .included
+    display: none
     &__size
         max-width: 700px
     &__title
@@ -280,7 +251,7 @@
         line-height: 22px
         color: $dark
     &-name
-        +flex
+        display: none
         align-items: flex-end
         &__size
             margin-bottom: 40px
@@ -291,10 +262,11 @@
             line-height: 27px
             border-bottom: 1px solid $darkPink
     &-list
+        display: none
         padding: 0
         margin: 0
         list-style: none
-        +flex-wrap
+        flex-wrap: wrap
         &__size
             margin-left: 3px
             width: 100%
