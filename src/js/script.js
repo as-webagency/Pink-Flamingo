@@ -201,6 +201,7 @@ $(document).ready(function () {
     $('.modal, .modal-callback').fadeOut();
   });
 
+  // Валидация + Ajax 
   function formValidate(forms) {
     $(forms).validate({
       errorElement: "div",
@@ -238,7 +239,9 @@ $(document).ready(function () {
   formValidate('.contact-sides__form');
   formValidate('.calc-box-right__form');
   formValidate('.modal-callback__form');
+  formValidate('.quiz-bottom__form');
 
+  // Маска для телефона
   $('.calc-box-right__form input[type=tel]').mask('+7(000) 00-00-000', {placeholder: 'Номер телефона'});
   $('[type=tel]').mask('+7(000) 00-00-000');
 

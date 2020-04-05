@@ -1,0 +1,266 @@
+.quiz
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-color: $light
+    max-width: 1311px
+    width: 100%
+    min-height: 682px
+    z-index: 45
+    &-top
+        padding: 9px 0 18px 64px
+        +flex-wrap
+        align-items: center
+        border-bottom: 1px solid $darkPink
+        &__title
+            margin: 0 0 0 37px
+            font-size: 18px
+            line-height: 25px
+            color: $dark
+    &-bottom
+        &__field
+            padding: 60px 59px 43px 64px
+            &:nth-child(2),
+            &:nth-child(3)
+                .quiz-bottom__block
+                    margin-top: 110px
+            &:nth-child(5)
+                .quiz-bottom
+                    &__title
+                        font-weight: normal
+                        font-size: 27px
+                        line-height: 37px
+                        color: $dark
+                        margin: 0
+                    &__text
+                        line-height: 22px
+                        margin: 15px 0
+                        color: $dark
+                    &__result
+                        font-weight: 600
+                        font-size: 20px
+                        line-height: 27px
+                        color: $darkPink
+                        margin-bottom: 25px
+                    &__bonus
+                        color: $dark
+                        font-weight: 600
+                        font-size: 20px
+                        line-height: 27px
+                        margin-bottom: 17px
+                    &__wrapper
+                        position: relative
+                        max-width: 324px
+                        margin-bottom: 17px
+                        &-text
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%, -50%)
+                            width: 100%
+                            max-width: 207px
+                            margin: 0 auto
+                            font-family: 'Nautilus Pompilius', cursive
+                            font-weight: normal
+                            font-size: 22px
+                            line-height: 142.1%
+                    &__prezent-image
+                        max-width: 650px
+                        img
+                            margin-left: auto
+        &__title
+            margin: 0 0 30px
+            font-size: 20px
+            line-height: 27px
+            color: $black
+        &__radio
+            display: none
+        &__label
+            margin-right: 40px
+            display: inline-block
+            cursor: pointer
+            transition: box-shadow .4s ease-in-out
+            border-radius: 5px
+            &:hover
+                box-shadow: 0px 4px 17px $darkPink
+                .quiz-bottom
+                    &__choise
+                        border: 1px solid $darkPink
+            &:last-child
+                margin-right: 0
+        &__choise
+            max-width: 242px
+            border: 1px solid $dark
+            box-shadow: 0px -2px 10px rgba($black, 0.25)
+            border-radius: 5px
+        &__image
+            width: 100%
+            height: 247px
+            overflow: hidden
+        &__answer
+            width: 100%
+            height: 49px
+            +flex-content-center
+        &__block
+            margin-top: 50px
+            max-width: 860px
+            +flex
+            justify-content: flex-end
+        &__button
+            border: none
+            &-prev
+                width: 48px
+                height: 48px
+                border-radius: 50%
+                border: 1px solid $lightPink
+                margin-right: 25px
+                background: transparent url('../img/quiz/q-prev-arrow.png') center no-repeat
+            &-next
+                max-width: 171px
+                width: 100%
+                height: 45px
+                text-align: left
+                padding-left: 35px
+                position: relative
+                &::before
+                    content: ''
+                    position: absolute
+                    top: 19px
+                    right: 30px
+                    width: 34px
+                    height: 8px
+                    background: url('../img/quiz/q-next-arrow.png') center no-repeat
+        &__group
+            +flex-items-center
+            max-width: 409px
+            width: 100%
+            height: 60px
+            border: 1px solid $tab
+            padding: 15px
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+        &__input
+            &-check
+                opacity: 0
+                visibility: hidden
+                &:checked + 
+                    .quiz-bottom
+                        &__label-check
+                            &::before
+                                border: 1px solid $lightPink
+                                background: url(../img/check.png) center no-repeat
+        &__label
+            &-check
+                line-height: 22px
+                color: $dark
+                +flex-items-center
+                &::before
+                    content: ''
+                    width: 30px
+                    height: 30px
+                    background-color: $light
+                    border: 1px solid $dark
+                    border-radius: 5px
+                    margin-right: 15px
+    &-right
+        &__position
+            position: absolute
+            top: 0
+            right: 0
+            max-width: 316px
+            width: 100%
+        &__bg
+            background: url('../img/quiz/quiz-bg.jpg') no-repeat
+            width: 100%
+            min-height: 682px
+        &__on
+            text-align: center
+            font-size: 16px
+            line-height: 22px
+            color: $dark
+            padding: 67px 0 20px
+            display: block
+        &__interest
+            font-weight: bold
+            font-size: 73px
+            line-height: 99px
+            text-align: center
+            color: $lightPink
+            margin-bottom: 85px
+        &__find
+            display: block
+            font-family: 'Nautilus Pompilius', cursive
+            font-size: 29px
+            line-height: 121.3%
+            text-align: center
+            margin: 0 auto 70px
+            max-width: 210px
+        &__image
+            margin: 0 auto
+    &-form
+        &__size
+            position: absolute
+            top: 0
+            right: 0
+            z-index: 10
+            max-width: 580px
+            height: 100%
+            width: 100%
+            background-color: $grey
+        &__block
+            max-width: 397px
+            margin: 155px 0 0 60px
+        &__group
+            position: relative
+            margin-bottom: 20px
+        &__label
+            margin-bottom: 10px
+            display: block
+            font-size: 14px
+            line-height: 19px
+            color: $black
+        &__input
+            background-color: $light
+            height: 47px
+            border: 1px solid $dark
+            padding: 0 10px
+        &__select
+            width: 100%
+            height: 47px
+            border-radius: 5px
+            border: 1px solid $dark
+            appearance: none
+            padding-left: 15px
+            background: $light url('../img/quiz/ar_down.png') no-repeat
+            background-position: 95% 20px
+        &__button
+            height: 45px
+            width: 100%
+            display: block
+            margin: 0 auto 30px
+        &__label
+            &-policy
+                +flex-items-center
+                font-size: 14px
+                line-height: 19px
+                color: $black
+                &::before
+                    content: ''
+                    width: 18px
+                    height: 18px
+                    border: 1px solid $dark
+                    margin-right: 14px
+                    background-color: $light
+        &__input
+            &-policy
+                opacity: 0
+                visibility: hidden
+                &:checked + 
+                    .quiz-form__label-policy
+                        &::before
+                            background: $light url(../img/check.png) center no-repeat
+fieldset
+    padding: 0
+    border: none

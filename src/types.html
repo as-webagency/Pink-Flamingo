@@ -1572,6 +1572,160 @@
         </div>
     </div>
 
+    <div class="quiz">
+      <div class="quiz-top">
+        <a href="index.html" class="quiz-top__logo">
+          <img src="./img/quiz/quiz-logo.png" alt="quiz-logo">
+        </a>
+        <h4 class="quiz-top__title">Подкажем, какая уборка подходит для Вас</h4>
+      </div>
+      <div class="quiz-bottom">
+        <form action="#" class="form quiz-bottom__form" method="post">
+          <fieldset class="quiz-bottom__field" style="display: none;">
+            <h5 class="quiz-bottom__title">Ваша квартира после ремонта?</h5>
+            <label for="quiz-label-yes" class="quiz-bottom__label">
+              <input type="radio" id="quiz-label-yes" class="quiz-bottom__radio">
+                <div class="quiz-bottom__choise">
+                  <div class="quiz-bottom__image">
+                    <img src="./img/quiz/quiz_1.jpg" alt="quiz_1">
+                  </div>
+                  <span class="quiz-bottom__answer">Да</span>
+                </div>
+            </label>
+            <label for="quiz-label-no" class="quiz-bottom__label">
+              <input type="radio" id="quiz-label-no" class="quiz-bottom__radio">
+                <div class="quiz-bottom__choise">
+                  <div class="quiz-bottom__image">
+                    <img src="./img/quiz/quiz_2.jpg" alt="quiz_2">
+                  </div>
+                  <span class="quiz-bottom__answer">Нет</span>
+                </div>
+            </label>
+            <div class="quiz-bottom__block">
+              <button class="quiz-bottom__button-prev"></button>
+              <button class="button button__blick quiz-bottom__button-next button--primary">Далее</button>
+            </div>
+          </fieldset>
+          <fieldset class="quiz-bottom__field" style="display: none;">
+            <h5 class="quiz-bottom__title">Укажите площадь Вашей квартиры/дома?</h5>
+            <div class="quiz-bottom__wrap">
+              <div class="quiz-bottom__group">
+                <input type="checkbox" name="user_check" id="check1" class="quiz-bottom__input-check">
+                <label for="check1" class="quiz-bottom__label-check">Менее 50 кв м</label>
+              </div>
+              <div class="quiz-bottom__group">
+                <input type="checkbox" name="user_check" id="check2" class="quiz-bottom__input-check">
+                <label for="check2" class="quiz-bottom__label-check">От 50 до 100 кв м</label>
+              </div>
+              <div class="quiz-bottom__group">
+                <input type="checkbox" name="user_check" id="check3" class="quiz-bottom__input-check">
+                <label for="check3" class="quiz-bottom__label-check">Более 100 кв м</label>
+              </div>
+            </div>
+            <div class="quiz-bottom__block">
+              <button class="quiz-bottom__button-prev"></button>
+              <button class="button button__blick quiz-bottom__button-next button--primary">Далее</button>
+            </div>
+          </fieldset>
+          <fieldset class="quiz-bottom__field" style="display: none;">
+            <h5 class="quiz-bottom__title">Как давно у Вас проводилась генеральная уборка??</h5>
+            <div class="quiz-bottom__wrap">
+              <div class="quiz-bottom__group">
+                <input type="checkbox" name="user_check" id="check4" class="quiz-bottom__input-check">
+                <label for="check4" class="quiz-bottom__label-check">Недавно</label>
+              </div>
+              <div class="quiz-bottom__group">
+                <input type="checkbox" name="user_check" id="check5" class="quiz-bottom__input-check">
+                <label for="check5" class="quiz-bottom__label-check">Полгода назад</label>
+              </div>
+              <div class="quiz-bottom__group">
+                <input type="checkbox" name="user_check" id="check6" class="quiz-bottom__input-check">
+                <label for="check6" class="quiz-bottom__label-check">Более года назад</label>
+              </div>
+            </div>
+            <div class="quiz-bottom__block">
+              <button class="quiz-bottom__button-prev"></button>
+              <button class="button button__blick quiz-bottom__button-next button--primary">Далее</button>
+            </div>
+          </fieldset>
+          <fieldset class="quiz-bottom__field" style="display: none;">
+            <h5 class="quiz-bottom__title">Требуется ли мытье окон?</h5>
+            <label for="quiz-label-yes" class="quiz-bottom__label">
+              <input type="radio" id="quiz-label-yes" class="quiz-bottom__radio">
+                <div class="quiz-bottom__choise">
+                  <div class="quiz-bottom__image">
+                    <img src="./img/quiz/quiz_3.jpg" alt="quiz_3">
+                  </div>
+                  <span class="quiz-bottom__answer">Да</span>
+                </div>
+            </label>
+            <label for="quiz-label-no" class="quiz-bottom__label">
+              <input type="radio" id="quiz-label-no" class="quiz-bottom__radio">
+                <div class="quiz-bottom__choise">
+                  <div class="quiz-bottom__image">
+                    <img src="./img/quiz/quiz_4.jpg" alt="quiz_4">
+                  </div>
+                  <span class="quiz-bottom__answer">Нет</span>
+                </div>
+            </label>
+            <div class="quiz-bottom__block">
+              <button class="quiz-bottom__button-prev"></button>
+              <button class="button button__blick quiz-bottom__button-next button--primary">Далее</button>
+            </div>
+          </fieldset>
+          <fieldset class="quiz-bottom__field">
+            <h5 class="quiz-bottom__title">Заполните форму, что бы получить подарок!</h5>
+            <p class="quiz-bottom__text">Мы проанализировали Ваши ответы. Результат теста:</p>
+            <div class="quiz-bottom__result">Требуется генеральная уборка</div>
+            <div class="quiz-bottom__bonus">Ваш бонус:</div>
+            <div class="quiz-bottom__wrapper">
+              <img src="./img/quiz/order-bg.png" alt="order-bg">
+              <p class="quiz-bottom__wrapper-text">Сертификат 1000 руб
+                на генеральную уборку </p>
+            </div>
+            <div class="quiz-bottom__prezent-image">
+              <img src="./img/quiz/prezent2.png" alt="prezent2" class="quiz-bottom__wrapper-img">
+            </div>
+            <div class="quiz-form quiz-form__size">
+              <div class="quiz-form__block">
+                <div class="quiz-form__group">
+                  <label for="quiz-name" class="quiz-form__label">Как к Вам обращаться?</label>
+                  <input type="text" id="quiz-name" name="user_name" class="input quiz-form__input">
+                </div>
+                <div class="quiz-form__group">
+                  <label for="quiz-phone" class="quiz-form__label">Номер телефона*</label>
+                  <input type="tel" id="quiz-phone" name="user_phone" class="input quiz-form__input">
+                </div>
+                <div class="quiz-form__group">
+                  <label for="quiz-call" class="quiz-form__label">Способ связи</label>
+                  <select name="user_call" id="quiz-call" class="quiz-form__select">
+                    <option value="Позвонить">Позвонить</option>
+                    <option value="Viber">Viber</option>
+                    <option value="Whatsapp">Whatsapp</option>
+                  </select>
+                </div>
+                <div class="quiz-form__group">
+                  <input type="checkbox" id="quiz-policy" class="quiz-form__input-policy">
+                  <label for="quiz-policy" class="quiz-form__label-policy">Даю согласие на обработку персональных данных</label>
+                </div>
+                <button type="submit" class="button button__blick quiz-form__button button--primary">Получить результаты</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="quiz-right quiz-right__position" style="display: none;">
+        <div class="quiz-right__bg">
+          <span class="quiz-right__on">Тест пройден на</span>
+          <div class="quiz-right__interest"><span id="quiz__interest">25</span>%</div>
+          <span class="quiz-right__find">Узнайте, какая 
+            скидка ждет вас
+            в конце теста!</span>
+          <img src="./img/quiz/present.png" alt="present" class="quiz-right__image">
+        </div>
+      </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
