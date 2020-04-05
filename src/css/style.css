@@ -6784,6 +6784,7 @@ body.compensate-for-scrollbar {
 }
 
 .quiz {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -7224,6 +7225,7 @@ fieldset {
 }
 
 .modal {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;

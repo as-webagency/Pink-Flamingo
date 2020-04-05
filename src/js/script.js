@@ -177,6 +177,10 @@ $(document).ready(function () {
     $('.modal, .modal-callback').fadeIn();
   });
 
+  $('.pass-test__button').click(function () {
+    $('.modal, .quiz').fadeIn();
+  });
+
   $('.services-card__button').click(function () {
     $('.modal, .modal-callback').fadeIn();
   });
@@ -199,6 +203,10 @@ $(document).ready(function () {
 
   $('.modal-thanks__close').click(function () {
     $('.modal, .modal-callback').fadeOut();
+  });
+
+  $('.modal').click(function () {
+    $('.modal, .quiz').fadeOut();
   });
 
   // Валидация + Ajax 
