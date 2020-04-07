@@ -52,7 +52,7 @@
                         margin-bottom: 17px
                     &__wrapper
                         position: relative
-                        max-width: 324px
+                        max-width: 325px
                         margin-bottom: 17px
                         &-text
                             position: absolute
@@ -60,7 +60,7 @@
                             left: 50%
                             transform: translate(-50%, -50%)
                             width: 100%
-                            max-width: 207px
+                            max-width: 235px
                             margin: 0 auto
                             font-family: 'Nautilus Pompilius', cursive
                             font-weight: normal
@@ -84,6 +84,11 @@
             transition: box-shadow .4s ease-in-out
             border-radius: 5px
             &:hover
+                box-shadow: 0px 4px 17px $darkPink
+                .quiz-bottom
+                    &__choise
+                        border: 1px solid $darkPink
+            &--active
                 box-shadow: 0px 4px 17px $darkPink
                 .quiz-bottom
                     &__choise

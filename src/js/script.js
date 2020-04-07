@@ -179,6 +179,7 @@ $(document).ready(function () {
 
   $('.pass-test__button').click(function () {
     $('.modal, .quiz').fadeIn();
+    quiz();
   });
 
   $('.services-card__button').click(function () {
@@ -229,12 +230,13 @@ $(document).ready(function () {
           success: function (response) {
             $(forms)[0].reset();
             $('.modal-callback').fadeOut();
+            $('.quiz').fadeOut();
             $('.modal, .modal-thanks').fadeIn();
             $('.modal-thanks__close').click(function (){
               $('.modal, .modal-thanks').fadeOut();
             });
             $('.modal').click(function (){
-              $('.modal, .modal-thanks').fadeOut();
+              $('.modal, .modal-thanks, .quiz').fadeOut();
             });
           },
           error: function (response) {
@@ -275,81 +277,329 @@ $(document).ready(function () {
       variant = variants[type][index],
       windowWidth = document.documentElement.clientWidth;
   
-    const resetForm = () => {
-      rangeInput.value = 20;
-      rangeCount.value = rangeInput.value;
-      index = 0;
-    };
-  
-    const checkIndex = () => {
-      variant = variants[type][index];
-    };
-  
-    const giveResult = () => {
-      return (result + variant) * room;
-    };
-  
-    const exitTotal = () => {
-      total.textContent = giveResult();
-    };
-  
-    const adaptiveView = () => {
-      const maxCount = +rangeInput.getAttribute("max");
-      const valCount = +rangeInput.value;
-  
-      if (windowWidth < 565) {
-        rangeCount.style.left = (valCount * 100) / maxCount - 14 + "%";
-      }
-    };
-  
-    //   после загрузки страницы меняем value rangeCount
-    rangeCount.value = rangeInput.value;
-    total.textContent = giveResult();
-  
-    rangeInput.addEventListener("input", (event) => {
-      const target = event.target;
-  
-      rangeCount.value = target.value;
-      if (rangeCount.value <= 50) {
+    if(rangeInput) {
+      const resetForm = () => {
+        rangeInput.value = 20;
+        rangeCount.value = rangeInput.value;
         index = 0;
-      } else if (rangeCount.value <= 70) {
-        index = 1;
-      } else if (rangeCount.value <= 90) {
-        index = 2;
-      } else if (rangeCount.value <= 110) {
-        index = 3;
-      } else if (rangeCount.value <= 130) {
-        index = 4;
-      } else if (rangeCount.value <= 150) {
-        index = 5;
-      } else {
-        index = 6;
-      }
-      checkIndex();
-      exitTotal();
-      adaptiveView();
-    });
-  
-    typeSelect.addEventListener("change", (event) => {
-      resetForm();
-      type = +event.target.value - 1;
-      checkIndex();
-      exitTotal();
-    });
-  
-    roomSelect.addEventListener("change", (event) => {
-      resetForm();
-      room = +event.target.value;
-      checkIndex();
-      exitTotal();
-    });
-  
-    window.addEventListener("resize", () => {
-      windowWidth = document.documentElement.clientWidth;
-      adaptiveView();
-    });
+      };
+    
+      const checkIndex = () => {
+        variant = variants[type][index];
+      };
+    
+      const giveResult = () => {
+        return (result + variant) * room;
+      };
+    
+      const exitTotal = () => {
+        total.textContent = giveResult();
+      };
+    
+      const adaptiveView = () => {
+        const maxCount = +rangeInput.getAttribute("max");
+        const valCount = +rangeInput.value;
+    
+        if (windowWidth < 565) {
+          rangeCount.style.left = (valCount * 100) / maxCount - 14 + "%";
+        }
+      };
+    
+      //   после загрузки страницы меняем value rangeCount
+      rangeCount.value = rangeInput.value;
+      total.textContent = giveResult();
+    
+      rangeInput.addEventListener("input", (event) => {
+        const target = event.target;
+    
+        rangeCount.value = target.value;
+        if (rangeCount.value <= 50) {
+          index = 0;
+        } else if (rangeCount.value <= 70) {
+          index = 1;
+        } else if (rangeCount.value <= 90) {
+          index = 2;
+        } else if (rangeCount.value <= 110) {
+          index = 3;
+        } else if (rangeCount.value <= 130) {
+          index = 4;
+        } else if (rangeCount.value <= 150) {
+          index = 5;
+        } else {
+          index = 6;
+        }
+        checkIndex();
+        exitTotal();
+        adaptiveView();
+      });
+    
+      typeSelect.addEventListener("change", (event) => {
+        resetForm();
+        type = +event.target.value - 1;
+        checkIndex();
+        exitTotal();
+      });
+    
+      roomSelect.addEventListener("change", (event) => {
+        resetForm();
+        room = +event.target.value;
+        checkIndex();
+        exitTotal();
+      });
+    
+      window.addEventListener("resize", () => {
+        windowWidth = document.documentElement.clientWidth;
+        adaptiveView();
+      });
+    }
   };
   calc();
+
+  // Квиз
+  const quiz = () => {
+    const formBlock = document.querySelector(".quiz-bottom__form");
+    const fieldset = formBlock.querySelectorAll(".quiz-bottom__field");
+    const titleResult = fieldset[4].querySelector(".quiz-bottom__result");
+    const discountResult = fieldset[4].querySelector(
+      ".quiz-bottom__wrapper-text"
+    );
+    const percentSpan = document.getElementById("quiz__interest");
+    const buttonsNext = document.querySelectorAll(".quiz-bottom__button-next");
+    const buttonsPrev = document.querySelectorAll(".quiz-bottom__button-prev");
+    const inputRec = document.getElementById('recomendation');
+    const inputDiscount = document.getElementById('discount');
+  
+    const objQuizResult = {};
+  
+    let countBlock = 0;
+   
+    // функция смены текста %
+    const changePersent = (count) => {
+      if (count === 0) {
+        percentSpan.textContent = "25";
+      } else if (count === 1) {
+        percentSpan.textContent = "50";
+      } else if (count === 2) {
+        percentSpan.textContent = "75";
+      } else if (count === 3) {
+        percentSpan.textContent = "99";
+      }
+    };
+    changePersent();
+  
+    // функция переключения блоков с вопросами вперед
+    const nextBlock = (i) => {
+      fieldset[i - 1].style.display = "none";
+      fieldset[i].style.display = "block";
+      changePersent(i);
+    };
+  
+    // функция переключения блоков с вопросами назад
+    const prevBlock = (i) => {
+      fieldset[i + 1].style.display = "none";
+      fieldset[i].style.display = "block";
+      changePersent(i);
+    };
+  
+    // перебираем кнопки next и вешаем обработчики и блокируем
+    buttonsNext.forEach((btn) => {
+      btn.disabled = true;
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        countBlock++;
+        nextBlock(countBlock);
+      });
+    });
+  
+    // перебираем кнопки prev, убираем первую за ненадобностью и вешаем обработчики
+    buttonsPrev.forEach((btn, index) => {
+      if (index === 0) {
+        btn.remove();
+      }
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        countBlock--;
+        prevBlock(countBlock);
+      });
+    });
+    
+    formBlock.addEventListener("change", (e) => {
+      e.preventDefault();
+      let target = e.target;
+      
+      if (!target.tagName === "INPUT") {
+        return;
+      }
+
+      const label = target.parentNode;
+      const parent = label.parentNode;
+      const labels = parent.querySelectorAll('label')
+      
+      if (target.id === "quiz-label-fix-yes" ||
+       target.id === "quiz-label-fix-no" ||
+        target.id === "quiz-label-yes" ||
+         target.id === "quiz-label-no") {
+
+        labels.forEach(item => {
+          item.classList.remove('quiz-bottom__label--active')
+        })
+        label.classList.add('quiz-bottom__label--active')
+      }
       
 
+      // проверка первого вопроса и разблокирование кнопки next
+      if (target.id === "quiz-label-fix-yes") {
+        objQuizResult.afterRepair = "yes";
+        buttonsNext[countBlock].disabled = false;
+      } else if (target.id === "quiz-label-fix-no") {
+        objQuizResult.afterRepair = "no";
+        buttonsNext[countBlock].disabled = false;
+      }
+      // проверка второго вопроса и разблокирование кнопки next
+      if (target.id === "check1") {
+        objQuizResult.apartmentArea = "< 50m2";
+        buttonsNext[countBlock].disabled = false;
+      } else if (target.id === "check2") {
+        objQuizResult.apartmentArea = "50m2 - 100m2";
+        buttonsNext[countBlock].disabled = false;
+      } else if (target.id === "check3") {
+        objQuizResult.apartmentArea = "100m2 >";
+        buttonsNext[countBlock].disabled = false;
+      }
+      // проверка третьего вопроса и разблокирование кнопки next
+      if (target.id === "check4") {
+        objQuizResult.generalСleaning = "recently";
+        buttonsNext[countBlock].disabled = false;
+      } else if (target.id === "check5") {
+        objQuizResult.generalСleaning = "Half year ago";
+        buttonsNext[countBlock].disabled = false;
+      } else if (target.id === "check6") {
+        objQuizResult.generalСleaning = "Over a year ago";
+        buttonsNext[countBlock].disabled = false;
+      }
+      // проверка четвертого вопроса и разблокирование кнопки next
+      if (target.id === "quiz-label-yes") {
+        objQuizResult.washingWindows = "yes";
+        buttonsNext[countBlock].disabled = false;
+      } else if (target.id === "quiz-label-no") {
+        objQuizResult.washingWindows = "no";
+        buttonsNext[countBlock].disabled = false;
+      }
+  
+      // Если человек ответил на первый вопрос да и ему нужно мытье окон,
+      // то результат теста для него: Требуется уборка после ремонта.
+      // Ваш бонус-скидка 50% на мытье окон при заказе уборки после ремонта
+      if (
+        objQuizResult.afterRepair === "yes" &&
+        objQuizResult.washingWindows === "yes"
+      ) {
+        titleResult.textContent = "Требуется уборка после ремонта.";
+        inputRec.value = "Требуется уборка после ремонта.";
+        discountResult.innerHTML = "Cкидка 50% на мытье окон при заказе уборки после ремонта";
+        inputDiscount.value = "Cкидка 50% на мытье окон при заказе уборки после ремонта";
+      }
+  
+      // Если человек ответил на первый вопрос да, но ему не нужно мытье окон:
+      // Требуется уборка после ремонта. Ваш бонус сертификат 1000 рублей на уборку после ремонта
+      if (
+        objQuizResult.afterRepair === "yes" &&
+        objQuizResult.washingWindows === "no"
+      ) {
+        titleResult.textContent = "Требуется уборка после ремонта.";
+        inputRec.value = "Требуется уборка после ремонта.";
+        discountResult.innerHTML = "Cертификат 1000 руб на уборку после ремонта";
+        inputDiscount.value = "Cертификат 1000 руб на уборку после ремонта";
+      }
+  
+      // Если человек ответил менее 50 кв и недавно проводил ген уборку, то :
+      // Требуется поддерживающая уборка. Ваш бонус-при заказе четырех поддерживающих уборок, пятую дарим в подарок
+      if (
+        objQuizResult.afterRepair === "no" &&
+        objQuizResult.apartmentArea === "< 50m2" &&
+        objQuizResult.generalСleaning === "recently"
+      ) {
+        titleResult.textContent = "Требуется поддерживающая уборка.";
+        inputRec.value = "Требуется поддерживающая уборка.";
+        discountResult.innerHTML = "При заказе 4 поддерживающих уборок, 5 уборка в подарок";
+        inputDiscount.value = "При заказе 4 поддерживающих уборок, 5 уборка в подарок";
+      }
+  
+      // Если человек ответил менее 50 кв и проводил ген уборку пол года назад или более и ему нужны окна, то :
+      //  Требуется генеральная уборка. Ваш бонус 20% скидка на мытье окон при заказе генеральной уборки
+      if (
+        objQuizResult.afterRepair === "no" &&
+        objQuizResult.apartmentArea === "< 50m2" &&
+        (objQuizResult.generalСleaning === "Half year ago" ||
+          objQuizResult.generalСleaning === "Over a year ago") &&
+        objQuizResult.washingWindows === "yes"
+      ) {
+        titleResult.textContent = "Требуется генеральная уборка.";
+        inputRec.value = "Требуется генеральная уборка.";
+        discountResult.innerHTML = "20% скидка на мытье окон при заказе генеральной уборки";
+        inputDiscount.value = "20% скидка на мытье окон при заказе генеральной уборки";
+      }
+  
+      // Если человек ответил менее 50 кв и проводил ген уборку пол года назад или более и ему не нужны окна,
+      //  то : Требуется генеральная уборка. Ваш бонус сертификат 500 рублей на генеральную уборку
+      if (
+        objQuizResult.afterRepair === "no" &&
+        objQuizResult.apartmentArea === "< 50m2" &&
+        (objQuizResult.generalСleaning === "Half year ago" ||
+          objQuizResult.generalСleaning === "Over a year ago") &&
+        objQuizResult.washingWindows === "no"
+      ) {
+        titleResult.textContent = "Требуется генеральная уборка.";
+        inputRec.value = "Требуется генеральная уборка.";
+        discountResult.innerHTML = "Сертификат 500 руб на генеральную уборку";
+        inputDiscount.value = "Сертификат 500 руб на генеральную уборку";
+      }
+  
+      // Если площадь от 50 и выше или более 100,он проводил ген уборку недавно, то :
+      // Требуется поддерживающая уборка. Ваш бонус-при заказе четырех поддерживающих уборок, пятую дарим в подарок
+      if (
+        objQuizResult.afterRepair === "no" &&
+        (objQuizResult.apartmentArea === "50m2 - 100m2" ||
+          objQuizResult.apartmentArea === "100m2 >") &&
+        objQuizResult.generalСleaning === "recently"
+      ) {
+        titleResult.textContent = "Требуется поддерживающая уборка.";
+        inputRec.value = "Требуется поддерживающая уборка.";
+        discountResult.innerHTML = "При заказе 4 поддерживающих уборок, 5 уборка в подарок";
+        inputDiscount.value = "При заказе 4 поддерживающих уборок, 5 уборка в подарок";
+      }
+  
+      // Если площадь от 50 и выше или более 100,он проводил ген уборку пол года назад или более и ему нужны окна,то :
+      //  Требуется генеральная уборка. Ваш бонус 50% скидка на мытье окон при заказе генеральной уборки
+      if (
+        objQuizResult.afterRepair === "no" &&
+        (objQuizResult.apartmentArea === "50m2 - 100m2" ||
+          objQuizResult.apartmentArea === "100m2 >") &&
+        (objQuizResult.generalСleaning === "Half year ago" ||
+          objQuizResult.generalСleaning === "Over a year ago") &&
+        objQuizResult.washingWindows === "yes"
+      ) {
+        titleResult.textContent = "Требуется генеральная уборка.";
+        inputRec.value = "Требуется генеральная уборка.";
+        discountResult.innerHTML = "Cкидка 50% на мытье окон при заказе уборки после ремонта";
+        inputDiscount.value = "Cкидка 50% на мытье окон при заказе уборки после ремонта";
+      }
+  
+      // Если площадь от 50 и выше или более 100,он проводил ген уборку пол года назад или более
+      // и ему не нужны окна,то : Требуется генеральная уборка. Ваш бонус сертификат 1000 рублей на генеральную уборку
+      if (
+        objQuizResult.afterRepair === "no" &&
+        (objQuizResult.apartmentArea === "50m2 - 100m2" ||
+          objQuizResult.apartmentArea === "100m2 >") &&
+        (objQuizResult.generalСleaning === "Half year ago" ||
+          objQuizResult.generalСleaning === "Over a year ago") &&
+        objQuizResult.washingWindows === "no"
+      ) {
+        titleResult.textContent = "Требуется генеральная уборка.";
+        inputRec.value = "Требуется генеральная уборка.";
+        discountResult.innerHTML = "Сертификат 1000 руб на генеральную уборку";
+        inputDiscount.value = "Сертификат 1000 руб на генеральную уборку";
+      }
+    });
+  };
+  
 });

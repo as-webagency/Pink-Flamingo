@@ -3,7 +3,41 @@
 $userName = $_POST['user_name'];
 $userPhone = $_POST['user_phone'];
 $userCall = $_POST['user_call'];
-$userQuestions = $_POST['user_text'];
+$first = $_POST['first'];
+
+if (isset($_POST['user_email']) or !empty($_POST['user_email'])) {
+    $userEmail = $_POST['user_email'];
+} 
+
+if (isset($_POST['user_text']) or !empty($_POST['user_text'])) {
+    $userQuestions = 'Ваш вопрос: ' . $_POST['user_text'] . '';
+} 
+
+if (isset($_POST['first']) or !empty($_POST['first'])) {
+    $discount = 'Ваша квартира после ремонта? - ' . $_POST['first'] . '';
+}
+
+if (isset($_POST['second']) or !empty($_POST['second'])) {
+    $discount = 'Укажите площадь Вашей квартиры/дома? - ' . $_POST['second'] . '';
+}
+
+if (isset($_POST['third']) or !empty($_POST['third'])) {
+    $discount = 'Как давно у Вас проводилась генеральная уборка? - ' . $_POST['third'] . '';
+}
+
+if (isset($_POST['fourth']) or !empty($_POST['fourth'])) {
+    $discount = 'Требуется ли мытье окон? - ' . $_POST['fourth'] . '';
+}
+
+if (isset($_POST['recomendation']) or !empty($_POST['recomendation'])) {
+    $recomendation = 'Рекомендация: ' . $_POST['recomendation'] . '';
+}
+
+if (isset($_POST['discount']) or !empty($_POST['discount'])) {
+    $discount = 'Подарок: ' . $_POST['discount'] . '';
+}
+
+
 
 
 // Load Composer's autoloader
@@ -29,17 +63,22 @@ try {
     //Recipients
     $mail->setFrom('semenovaleksandr407@gmail.com', 'Розовый Фламинго');
     $mail->addAddress('sniper.semenov@ukr.net', 'Joe User');     // Add a recipient
+    $mail->addAddress($userEmail, 'Joe User');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта - "Розовый Фламинго"';
     $mail->Body    = '
-        Как к Вам обращаться: ' . $userName . '<br> 
-        Телефон: ' . $userPhone . '<br>
-        Способ связи: ' . $userCall . '<br>
-        Ваш вопрос: ' . $userQuestions . '
+        Как к Вам обращаться: ' . $userName . ' <br> 
+        Телефон: ' . $userPhone . ' <br>
+        Способ связи: ' . $userCall . ' <br>
+        ' . $userQuestions . ' <br>
+        ' . $recomendation . '<br>
+        ' . $discount . ' <br>
+        ' . $text . '
     ';
-
+//  recomendation: ' . $recomendation . '<br>
+// discount: ' . $discount . '<br>
     if ($mail->send()) {
         echo "ok";
     } else {

@@ -7,6 +7,11 @@
             &__left
                 margin-left: 0
 @media (max-width: 1360px)
+    .quiz
+        max-width: 1000px
+        &-bottom
+            &__block
+                max-width: 540px
     .menu
         &__contacts
             margin-right: 0
@@ -196,6 +201,61 @@
             min-height: 704px
             background-size: cover
 @media (max-width: 1050px)
+    .quiz
+        max-width: 800px
+        min-height: 600px
+        &-top
+            padding: 9px 0 18px 28px
+            &__title
+                max-width: 300px
+                text-align: center
+                margin: 0 0 0 25px
+        &-bottom
+            &__choise
+                max-width: 177px
+            &__image
+                height: 182px
+            &__answer
+                height: 36px
+            &__block
+                max-width: 340px
+                margin: 60px 0 0 50px
+            &__field
+                padding: 40px 59px 43px 35px
+                &:nth-child(2),
+                &:nth-child(3)
+                    .quiz-bottom
+                        &__block, 
+                        &:nth-child(3)
+                            margin-top: 40px
+                        &__title
+                            max-width: 350px
+                            text-align: center
+                &:nth-child(5) 
+                    .quiz-bottom
+                        &__title,
+                        &__text
+                            max-width: 400px
+                        &__prezent
+                            &-image
+                                display: none
+            &__group
+                max-width: 350px
+        &-form
+            &__size
+                max-width: 340px
+            &__block
+                max-width: 300px
+                margin: 80px auto 0
+            &__label-policy
+                font-size: 10px
+        &-right
+            &__interest
+                margin-bottom: 50px
+            &__bg
+                min-height: 600px
+            &__image
+                max-width: 240px
     .steps
         &-sides
             &__left
@@ -282,6 +342,100 @@
                 flex-direction: column
                 margin-left: 0
 @media (max-width: 768px)
+    .quiz
+        max-width: 400px
+        height: 730px
+        overflow-y: scroll
+        &-top
+            justify-content: center
+            padding: 13px 0
+            border-bottom: none
+            &__logo
+                max-width: 95px
+            &__title
+                font-size: 14px
+                line-height: 19px
+                max-width: 220px
+        &-right
+            max-width: 100%
+            &__bg
+                position: relative
+                background-size: cover
+                background-position: center
+                height: 145px
+                min-height: auto
+                +flex
+                flex-direction: row
+            &__position
+                top: 113px
+            &__on
+                padding: 28px 0 0 23px
+            &__interest
+                font-size: 59px
+                line-height: 80px
+                margin-bottom: 0
+                position: absolute
+                bottom: 20px
+                left: 23px
+            &__image
+                max-width: 92px
+                height: 60px
+                position: absolute
+                right: 40px
+                bottom: 8px
+            &__find
+                font-size: 14px
+                max-width: 115px
+                padding-top: 13px
+                position: absolute
+                right: 40px
+        &-bottom
+            &__title
+                margin: 170px auto 35px
+                text-align: center
+                max-width: 220px
+            &__field
+                max-width: 380px
+                padding: 0
+                margin: 0 auto
+                &:nth-child(1),
+                &:nth-child(4)
+                    .quiz-bottom
+                        &__label
+                            &:nth-child(3)
+                                margin-right: 0
+                &:nth-child(5) 
+                    .quiz-bottom
+                        &__title
+                            margin: 170px auto 35px
+                            max-width: 280px
+                            line-height: 35px
+                        &__text
+                            max-width: 300px
+                            margin: 15px auto
+                            text-align: center
+                        &__result,
+                        &__bonus
+                            text-align: center
+                        &__wrapper
+                            margin: 0 auto 15px
+            &__label
+                margin-right: 20px
+            &__block
+                margin: 50px auto
+                max-width: 250px
+            &__wrap
+                max-width: 280px
+                margin: 0 auto
+            &__group
+                max-width: 100%
+        &-form
+            &__size
+                position: static
+                background-color: $light
+                max-width: 100%
+            &__block
+                margin: 30px auto 0
     .calc
         &-box
             &-left
@@ -714,6 +868,41 @@
                 &-policy
                     font-size: 10px
 @media (max-width: 380px)
+    .quiz
+        height: 680px
+        &-bottom
+            &__title
+                font-size: 16px
+                line-height: 22px
+            &__choise
+                max-width: 127px
+            &__image
+                height: 131px
+            &__label
+                margin-right: 10px
+                &-check
+                    &::before
+                        width: 26px
+                        height: 26px
+            &__field
+                max-width: 270px
+                &:nth-child(5) 
+                    .quiz-bottom
+                        &__title
+                            font-size: 20px
+                            line-height: normal
+                            margin: 160px auto 20px
+                        &__wrapper
+                            &-text
+                                max-width: 200px
+                                font-size: 20px
+            &__group
+                padding: 10px
+                margin-bottom: 10px
+        &-form
+            &__label
+                &-policy
+                    font-size: 9px
     .types
         &__title
             font-size: 18px
@@ -761,6 +950,16 @@
             max-width: 228px
             margin: 21px auto 20px
 @media (max-width: 347px)
+    .quiz
+        &-top
+            &__title
+                margin: 0
+                margin-left: auto
+        &-right
+            &__on
+                padding: 28px 0 0 15px
+            &__interest
+                left: 15px
     .additionally
         .container
             padding: 0 5px
