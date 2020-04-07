@@ -6876,6 +6876,7 @@ body.compensate-for-scrollbar {
   font-weight: normal;
   font-size: 22px;
   line-height: 142.1%;
+  text-align: center;
 }
 
 .quiz-bottom__field:nth-child(5) .quiz-bottom__prezent-image {
@@ -6914,17 +6915,9 @@ body.compensate-for-scrollbar {
           box-shadow: 0px 4px 17px #F65D77;
 }
 
-.quiz-bottom__label:hover .quiz-bottom__choise {
-  border: 1px solid #F65D77;
-}
-
 .quiz-bottom__label--active {
   -webkit-box-shadow: 0px 4px 17px #F65D77;
           box-shadow: 0px 4px 17px #F65D77;
-}
-
-.quiz-bottom__label--active .quiz-bottom__choise {
-  border: 1px solid #F65D77;
 }
 
 .quiz-bottom__label:last-child {
@@ -6933,7 +6926,6 @@ body.compensate-for-scrollbar {
 
 .quiz-bottom__choise {
   max-width: 242px;
-  border: 1px solid #595354;
   -webkit-box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -7015,6 +7007,16 @@ body.compensate-for-scrollbar {
   border: 1px solid #E5E5E5;
   padding: 15px;
   margin-bottom: 20px;
+  -webkit-transition: -webkit-box-shadow .4s ease-in-out;
+  transition: -webkit-box-shadow .4s ease-in-out;
+  -o-transition: box-shadow .4s ease-in-out;
+  transition: box-shadow .4s ease-in-out;
+  transition: box-shadow .4s ease-in-out, -webkit-box-shadow .4s ease-in-out;
+}
+
+.quiz-bottom__group:hover {
+  -webkit-box-shadow: 0px 2px 8px #F65D77;
+          box-shadow: 0px 2px 8px #F65D77;
 }
 
 .quiz-bottom__group:last-child {
@@ -7151,7 +7153,7 @@ body.compensate-for-scrollbar {
   height: 45px;
   width: 100%;
   display: block;
-  margin: 0 auto 30px;
+  margin: 50px auto;
 }
 
 .quiz-form__label-policy {
@@ -7907,7 +7909,7 @@ fieldset {
     max-width: 220px;
   }
   .quiz-bottom__field {
-    max-width: 380px;
+    max-width: 280px;
     padding: 0;
     margin: 0 auto;
   }
@@ -7943,6 +7945,12 @@ fieldset {
   }
   .quiz-bottom__group {
     max-width: 100%;
+  }
+  .quiz-bottom__choise {
+    max-width: 127px;
+  }
+  .quiz-bottom__image {
+    height: 131px;
   }
   .quiz-form__size {
     position: static;
@@ -8496,17 +8504,11 @@ fieldset {
 
 @media (max-width: 380px) {
   .quiz {
-    height: 680px;
+    height: 550px;
   }
   .quiz-bottom__title {
     font-size: 16px;
     line-height: 22px;
-  }
-  .quiz-bottom__choise {
-    max-width: 127px;
-  }
-  .quiz-bottom__image {
-    height: 131px;
   }
   .quiz-bottom__label {
     margin-right: 10px;

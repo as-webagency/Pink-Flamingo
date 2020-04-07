@@ -66,6 +66,7 @@
                             font-weight: normal
                             font-size: 22px
                             line-height: 142.1%
+                            text-align: center
                     &__prezent-image
                         max-width: 650px
                         img
@@ -85,19 +86,12 @@
             border-radius: 5px
             &:hover
                 box-shadow: 0px 4px 17px $darkPink
-                .quiz-bottom
-                    &__choise
-                        border: 1px solid $darkPink
             &--active
                 box-shadow: 0px 4px 17px $darkPink
-                .quiz-bottom
-                    &__choise
-                        border: 1px solid $darkPink
             &:last-child
                 margin-right: 0
         &__choise
             max-width: 242px
-            border: 1px solid $dark
             box-shadow: 0px -2px 10px rgba($black, 0.25)
             border-radius: 5px
         &__image
@@ -145,6 +139,9 @@
             border: 1px solid $tab
             padding: 15px
             margin-bottom: 20px
+            transition: box-shadow .4s ease-in-out
+            &:hover
+                box-shadow: 0px 2px 8px $darkPink
             &:last-child
                 margin-bottom: 0
         &__input
@@ -245,7 +242,7 @@
             height: 45px
             width: 100%
             display: block
-            margin: 0 auto 30px
+            margin: 50px auto
         &__label
             &-policy
                 +flex-items-center

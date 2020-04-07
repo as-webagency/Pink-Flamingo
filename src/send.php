@@ -3,7 +3,6 @@
 $userName = $_POST['user_name'];
 $userPhone = $_POST['user_phone'];
 $userCall = $_POST['user_call'];
-$first = $_POST['first'];
 
 if (isset($_POST['user_email']) or !empty($_POST['user_email'])) {
     $userEmail = $_POST['user_email'];
@@ -62,8 +61,8 @@ try {
 
     //Recipients
     $mail->setFrom('semenovaleksandr407@gmail.com', 'Розовый Фламинго');
-    $mail->addAddress('sniper.semenov@ukr.net', 'Joe User');     // Add a recipient
-    $mail->addAddress($userEmail, 'Joe User');     // Add a recipient
+    $mail->addAddress('sniper.semenov@ukr.net', 'Розовый Фламинго');     // Add a recipient
+    $mail->addAddress($userEmail, 'Розовый Фламинго');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML

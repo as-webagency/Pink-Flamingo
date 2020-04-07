@@ -493,8 +493,8 @@ $(document).ready(function () {
         objQuizResult.afterRepair === "yes" &&
         objQuizResult.washingWindows === "yes"
       ) {
-        titleResult.textContent = "Требуется уборка после ремонта.";
-        inputRec.value = "Требуется уборка после ремонта.";
+        titleResult.textContent = "Требуется уборка после ремонта";
+        inputRec.value = "Требуется уборка после ремонта";
         discountResult.innerHTML = "Cкидка 50% на мытье окон при заказе уборки после ремонта";
         inputDiscount.value = "Cкидка 50% на мытье окон при заказе уборки после ремонта";
       }
@@ -505,8 +505,8 @@ $(document).ready(function () {
         objQuizResult.afterRepair === "yes" &&
         objQuizResult.washingWindows === "no"
       ) {
-        titleResult.textContent = "Требуется уборка после ремонта.";
-        inputRec.value = "Требуется уборка после ремонта.";
+        titleResult.textContent = "Требуется уборка после ремонта";
+        inputRec.value = "Требуется уборка после ремонта";
         discountResult.innerHTML = "Cертификат 1000 руб на уборку после ремонта";
         inputDiscount.value = "Cертификат 1000 руб на уборку после ремонта";
       }
@@ -518,8 +518,8 @@ $(document).ready(function () {
         objQuizResult.apartmentArea === "< 50m2" &&
         objQuizResult.generalСleaning === "recently"
       ) {
-        titleResult.textContent = "Требуется поддерживающая уборка.";
-        inputRec.value = "Требуется поддерживающая уборка.";
+        titleResult.textContent = "Требуется поддерживающая уборка";
+        inputRec.value = "Требуется поддерживающая уборка";
         discountResult.innerHTML = "При заказе 4 поддерживающих уборок, 5 уборка в подарок";
         inputDiscount.value = "При заказе 4 поддерживающих уборок, 5 уборка в подарок";
       }
@@ -533,8 +533,8 @@ $(document).ready(function () {
           objQuizResult.generalСleaning === "Over a year ago") &&
         objQuizResult.washingWindows === "yes"
       ) {
-        titleResult.textContent = "Требуется генеральная уборка.";
-        inputRec.value = "Требуется генеральная уборка.";
+        titleResult.textContent = "Требуется генеральная уборка";
+        inputRec.value = "Требуется генеральная уборка";
         discountResult.innerHTML = "20% скидка на мытье окон при заказе генеральной уборки";
         inputDiscount.value = "20% скидка на мытье окон при заказе генеральной уборки";
       }
@@ -548,8 +548,8 @@ $(document).ready(function () {
           objQuizResult.generalСleaning === "Over a year ago") &&
         objQuizResult.washingWindows === "no"
       ) {
-        titleResult.textContent = "Требуется генеральная уборка.";
-        inputRec.value = "Требуется генеральная уборка.";
+        titleResult.textContent = "Требуется генеральная уборка";
+        inputRec.value = "Требуется генеральная уборка";
         discountResult.innerHTML = "Сертификат 500 руб на генеральную уборку";
         inputDiscount.value = "Сертификат 500 руб на генеральную уборку";
       }
@@ -562,8 +562,8 @@ $(document).ready(function () {
           objQuizResult.apartmentArea === "100m2 >") &&
         objQuizResult.generalСleaning === "recently"
       ) {
-        titleResult.textContent = "Требуется поддерживающая уборка.";
-        inputRec.value = "Требуется поддерживающая уборка.";
+        titleResult.textContent = "Требуется поддерживающая уборка";
+        inputRec.value = "Требуется поддерживающая уборка";
         discountResult.innerHTML = "При заказе 4 поддерживающих уборок, 5 уборка в подарок";
         inputDiscount.value = "При заказе 4 поддерживающих уборок, 5 уборка в подарок";
       }
@@ -578,8 +578,8 @@ $(document).ready(function () {
           objQuizResult.generalСleaning === "Over a year ago") &&
         objQuizResult.washingWindows === "yes"
       ) {
-        titleResult.textContent = "Требуется генеральная уборка.";
-        inputRec.value = "Требуется генеральная уборка.";
+        titleResult.textContent = "Требуется генеральная уборка";
+        inputRec.value = "Требуется генеральная уборка";
         discountResult.innerHTML = "Cкидка 50% на мытье окон при заказе уборки после ремонта";
         inputDiscount.value = "Cкидка 50% на мытье окон при заказе уборки после ремонта";
       }
